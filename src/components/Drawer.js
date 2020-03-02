@@ -12,18 +12,47 @@ import ListItemText from "@material-ui/core/ListItemText"
 import HomeIcon from "@material-ui/icons/Home"
 import DnsRoundedIcon from "@material-ui/icons/DnsRounded"
 import PublicIcon from "@material-ui/icons/Public"
+// import HomeIcon from "@material-ui/icons/Home"
+import PostAddIcon from "@material-ui/icons/PostAdd"
+import ArchiveIcon from "@material-ui/icons/Archive"
+import BarChartIcon from "@material-ui/icons/BarChart"
 
-const categories = [
+const menu = [
   {
-    id: "Sports Grants",
+    // id: "Projects",
     children: [
-      { id: "Data", icon: <DnsRoundedIcon />, link: "/sportsgrants" },
-      { id: "Map", icon: <PublicIcon />, link: "/sportsgrants/map" },
+      {
+        // id: "Sports Grants",
+        children: [
+          { id: "Home", icon: <HomeIcon />, link: "/" },
+          { id: "Blog", icon: <PostAddIcon />, link: "/blog" },
+          { id: "Archive", icon: <ArchiveIcon />, link: "/archive" },
+        ],
+      },
     ],
   },
   {
-    id: "Climate Act Now",
-    children: [{ id: "Data", icon: <DnsRoundedIcon />, link: "/climateact" }],
+    id: "Projects",
+    children: [
+      {
+        id: "Sports Grants",
+        children: [
+          { id: "Table", icon: <DnsRoundedIcon />, link: "/sportsgrants" },
+          {
+            id: "Figures",
+            icon: <BarChartIcon />,
+            link: "/sportsgrants/figures",
+          },
+          { id: "Map", icon: <PublicIcon />, link: "/sportsgrants/map" },
+        ],
+      },
+      {
+        id: "Climate Act Now",
+        children: [
+          { id: "Data", icon: <DnsRoundedIcon />, link: "/climateact" },
+        ],
+      },
+    ],
   },
 ]
 
@@ -76,52 +105,69 @@ const Drawer = ({ classes, closeDrawer, ...other }) => (
       >
         Infotorch
       </ListItem>
-      <ListItem className={clsx(classes.item, classes.itemCategory)}>
-        <ListItemIcon className={classes.itemIcon}>
-          <HomeIcon />
-        </ListItemIcon>
-        <ListItemText
-          classes={{
-            primary: classes.itemPrimary,
-          }}
-        >
-          Projects
-        </ListItemText>
-      </ListItem>
-      {categories.map(({ id, children }) => (
-        <React.Fragment key={id}>
-          <ListItem className={classes.categoryHeader}>
-            <ListItemText
-              classes={{
-                primary: classes.categoryHeaderPrimary,
-              }}
-            >
-              {id}
-            </ListItemText>
-          </ListItem>
-          {children.map(({ id: childId, icon, active, link }) => (
+      {menu.map(
+        ({ id, children: categories }, x) =>
+          (id ? (
             <ListItem
-              key={childId}
-              button
-              className={clsx(classes.item, active && classes.itemActiveItem)}
-              {...{ to: link }}
-              component={Link}
-              onClick={closeDrawer}
+              className={clsx(classes.item, classes.itemCategory)}
+              id={x}
             >
-              <ListItemIcon className={classes.itemIcon}>{icon}</ListItemIcon>
+              <ListItemIcon className={classes.itemIcon}>
+                <HomeIcon />
+              </ListItemIcon>
               <ListItemText
                 classes={{
                   primary: classes.itemPrimary,
                 }}
               >
-                {childId}
+                {id}
               </ListItemText>
             </ListItem>
-          ))}
+          ) : (
+            <></>
+          )) &&
+          categories.map(({ id, children }, i) => (
+            <React.Fragment key={id || i}>
+              {id && (
+                <ListItem className={classes.categoryHeader}>
+                  <ListItemText
+                    classes={{
+                      primary: classes.categoryHeaderPrimary,
+                    }}
+                  >
+                    {id}
+                  </ListItemText>
+                </ListItem>
+              )}
+              {children.map(({ id: childId, icon, active, link }) => (
+                <ListItem
+                  key={childId}
+                  button
+                  className={clsx(
+                    classes.item,
+                    active && classes.itemActiveItem,
+                  )}
+                  {...{ to: link }}
+                  component={Link}
+                  onClick={closeDrawer}
+                >
+                  <ListItemIcon className={classes.itemIcon}>
+                    {icon}
+                  </ListItemIcon>
+                  <ListItemText
+                    classes={{
+                      primary: classes.itemPrimary,
+                    }}
+                  >
+                    {childId}
+                  </ListItemText>
+                </ListItem>
+              ))}
 
-          <Divider className={classes.divider} />
-        </React.Fragment>
-      ))}
+              <Divider className={classes.divider} />
+            </React.Fragment>
+          )),
+      )}
     </List>
   </DrawMaterial>
 )

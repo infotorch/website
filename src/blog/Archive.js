@@ -7,7 +7,7 @@ const Data = () => (
   <div className="App">
     <Paper style={{ padding: "10px" }}>
       <Typography variant="h4" gutterBottom>
-        Homepage
+        Blog Archive
       </Typography>
     </Paper>
   </div>

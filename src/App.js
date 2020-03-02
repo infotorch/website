@@ -16,8 +16,12 @@ import DialogHost from "./components/DialogHost"
 import NotFoundContent from "./components/NotFound"
 
 import HomeContent from "./HomePage"
+import BlogContent from "./blog/BlogIndex"
+import BlogArchive from "./blog/Archive"
+
 import SportsGrantsMap from "./projects/sportsgrants/Map"
 import SportsGrantsData from "./projects/sportsgrants/Data"
+import SportsGrantsFigures from "./projects/sportsgrants/Figures"
 import ClimateActNow from "./projects/climateact/Data"
 
 const drawerWidth = 256
@@ -169,8 +173,19 @@ const App = () => {
                     <HomeContent openSnackbar={openSnackbar} />
                   </Route>
 
+                  <Route path="/blog" exact>
+                    <BlogContent openSnackbar={openSnackbar} />
+                  </Route>
+
+                  <Route path="/archive">
+                    <BlogArchive openSnackbar={openSnackbar} />
+                  </Route>
+
                   <Route path="/sportsgrants" exact>
                     <SportsGrantsData openSnackbar={openSnackbar} />
+                  </Route>
+                  <Route path="/sportsgrants/figures" exact>
+                    <SportsGrantsFigures openSnackbar={openSnackbar} />
                   </Route>
                   <Route path="/sportsgrants/map" exact>
                     <SportsGrantsMap openSnackbar={openSnackbar} />
