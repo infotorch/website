@@ -27,6 +27,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "predeploy": "react-scripts build",
+    "deploy": "aws s3 sync build s3://beta.infotorch.org --acl public-read",
     "prettier": "prettier --write '**/*.{js,jsx,ts,tsx,json,css,scss,md}'"
   },
   "devDependencies": {
