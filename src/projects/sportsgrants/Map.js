@@ -304,10 +304,6 @@ const Map = () => {
       onLoad={e => setRegions(generateElectoralRegions())}
       interactiveLayerIds={interactiveLayers}
     >
-      <div className="toggle-group absolute top left ml12 mt12 border border--2 border--white bg-white shadow-darken10 z1">
-        "test"
-      </div>
-
       <div style={navStyle}>
         <NavigationControl />
       </div>
