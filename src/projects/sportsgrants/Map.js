@@ -21,42 +21,54 @@ const defaultViewport = {
 
 const navStyle = {
   position: "absolute",
-  top: 36,
-  left: 0,
-  padding: "10px",
+  right: 0,
+  bottom: 0,
+  margin: "20px",
 }
 
 const parties = [
   {
     value: "ALP",
+    name: "Labor Party",
+    legend: true,
     color: "red",
   },
   {
     value: "GRN",
+    name: "Greens",
+    legend: true,
     color: "green",
   },
   {
     value: "IND",
+    name: "Independents",
+    legend: true,
     color: "grey",
   },
   {
     value: "KAP",
+    legend: false,
     color: "orange",
   },
   {
     value: "LP",
+    legend: false,
     color: "blue",
   },
   {
     value: "LNP",
+    name: "Liberal/National Coalition",
+    legend: true,
     color: "blue",
   },
   {
     value: "NP",
+    legend: false,
     color: "blue",
   },
   {
     value: "XEN",
+    legend: false,
     color: "orange",
   },
 ]
@@ -144,7 +156,7 @@ const mapOverlayStyle = {
   position: "absolute",
   top: 0,
   right: 0,
-  margin: "10px",
+  margin: "20px",
   padding: "10px",
   background: "rgba(255, 255, 255, 0.8)",
   marginRight: "20px",
@@ -153,7 +165,10 @@ const mapOverlayStyle = {
 }
 
 const MapOverlay = ({ electorate }) => (
-  <div style={mapOverlayStyle}>
+  <div
+    class="w240 round shadow-darken10 px12 py12 txt-s"
+    style={mapOverlayStyle}
+  >
     <h3>Electorate Info</h3>
     <p>
       <i>Mouse over electorate</i>
@@ -167,6 +182,53 @@ const MapOverlay = ({ electorate }) => (
         <p>{electorate.party}</p>
       </div>
     )}
+  </div>
+)
+
+const mapLegendStyle = {
+  position: "absolute",
+  bottom: 0,
+  left: 0,
+  margin: "20px",
+  padding: "10px",
+  background: "rgba(255, 255, 255, 0.8)",
+  overflow: "hidden",
+  borderRadius: "3px",
+}
+
+const MapLegend = () => (
+  <div
+    class="w240 round shadow-darken10 px12 py12 txt-s"
+    style={mapLegendStyle}
+  >
+    {parties
+      .filter(p => p.legend)
+      .map((party, i) => (
+        <div id={i}>
+          <strong class="block mb6">{party.name}</strong>
+          <div class="grid mb6">
+            {marginalities.map((marginality, k) => (
+              <div
+                id={i + k}
+                class="col h12"
+                style={{
+                  backgroundColor: chroma(party.color)
+                    .brighten(marginality.color)
+                    .hex(),
+                  opacity: 0.3,
+                }}
+              />
+            ))}
+          </div>
+        </div>
+      ))}
+    <div class="grid txt-xs">
+      {marginalities.map((margin, i) => (
+        <div key={i} class="col align-center">
+          {margin.value}
+        </div>
+      ))}
+    </div>
   </div>
 )
 
@@ -219,7 +281,7 @@ const Map = () => {
                 "fill-color": chroma(party.color)
                   .brighten(marginality.color)
                   .hex(),
-                "fill-opacity": 0.2,
+                "fill-opacity": 0.3,
               },
             }}
           />
@@ -273,12 +335,7 @@ const Map = () => {
         {regions}
       </Source>
 
-      <div className="bg-white absolute bottom right mr12 mb24 py12 px12 shadow-darken10 round z1 wmax180">
-        <div className="mb6">
-          <h2 className="txt-bold txt-s block">test</h2>
-          <p className="txt-s color-gray">test test </p>
-        </div>
-      </div>
+      <MapLegend />
     </ReactMapGL>
   )
 }
