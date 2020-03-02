@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react"
 import chroma from "chroma-js"
+import numeral from "numeral"
 import ReactMapGL, {
   Layer,
   NavigationControl,
@@ -36,7 +37,7 @@ const parties = [
   {
     value: "GRN",
     name: "Greens",
-    legend: true,
+    // legend: true,
     color: "green",
   },
   {
@@ -134,6 +135,14 @@ const grantsLayer = {
   // },
 }
 
+const grantInfoStyle = {
+  background: "rgba(255, 255, 255, 0.8)",
+  // marginRight: "20px",
+  overflow: "hidden",
+  borderRadius: "3px",
+  zIndex: 10000,
+}
+
 const GrantInfo = ({ feature: { properties, geometry }, onClick }) => (
   <Popup
     tipSize={5}
@@ -141,13 +150,29 @@ const GrantInfo = ({ feature: { properties, geometry }, onClick }) => (
     longitude={geometry.coordinates[0]}
     latitude={geometry.coordinates[1]}
     closeOnClick={false}
+    sortByDepth
     onClose={onClick}
   >
-    <div>
-      <p>
+    <div class="w240 px12 py12 txt-s" style={grantInfoStyle}>
+      <p class="txt-h3">
         <b>{properties.club}</b>
       </p>
-      <p>{properties.amount}</p>
+      <hr class="txt-hr"></hr>
+      <div>
+        {properties.address
+          .split(",")
+          .map(
+            (label, i) =>
+              label.trim().toLowerCase() !== "australia" && (
+                <p key={i}>{label}</p>
+              ),
+          )}
+      </div>
+      <p style={{ marginTop: "10px" }}>
+        Awarded <b>{numeral(properties.amount).format("$0,0")}</b> in round{" "}
+        {properties.rnd}
+        {properties.round}
+      </p>
     </div>
   </Popup>
 )
@@ -169,17 +194,38 @@ const MapOverlay = ({ electorate }) => (
     class="w240 round shadow-darken10 px12 py12 txt-s"
     style={mapOverlayStyle}
   >
-    <h3>Electorate Info</h3>
-    <p>
-      <i>Mouse over electorate</i>
+    <p class="txt-h4">
+      <b>Electorate</b>
     </p>
+    <hr class="txt-hr"></hr>
+
+    {!electorate && (
+      <p>
+        <i>Mouse over electorate</i>
+      </p>
+    )}
     {electorate && (
       <div>
-        <p>{electorate.electorate}</p>
+        <p class="txt-h4">{electorate.electorate}</p>
         <p>{electorate.candidate}</p>
-        <p>{electorate.party}</p>
-        <p>{electorate.marginalit}</p>
-        <p>{electorate.party}</p>
+        <p style={{ marginTop: "10px" }}>
+          {electorate.marginalit} {electorate.party} seat margin of{" "}
+          {electorate.margin}%
+        </p>
+        <div class="grid grid--gut12" style={{ marginTop: "10px" }}>
+          <div class="col col--8">
+            <p>Number of grants</p>
+          </div>
+          <div class="col col--4">
+            <p>{electorate.grants}</p>
+          </div>
+          <div class="col col--8">
+            <p>Total grant funding</p>
+          </div>
+          <div class="col col--4">
+            <p>{numeral(electorate.amount).format("$0,0")}</p>
+          </div>
+        </div>
       </div>
     )}
   </div>
@@ -209,7 +255,7 @@ const MapLegend = () => (
           <div class="grid mb6">
             {marginalities.map((marginality, k) => (
               <div
-                id={i + k}
+                key={i + "_" + k}
                 class="col h12"
                 style={{
                   backgroundColor: chroma(party.color)
@@ -237,7 +283,7 @@ const Map = () => {
   const [popup, setPopup] = useState(false)
   const [regions, setRegions] = useState()
   const [hoverElectorate, setHoverElectorate] = useState(false)
-  const [interactiveLayers, setInteractiveLayers] = useState([])
+  const [interactiveLayers, setInteractiveLayers] = useState(["grants_layer"])
   const mapEl = useRef(null)
 
   const onMouse = e => {
@@ -251,6 +297,21 @@ const Map = () => {
       setHoverElectorate(states[0].properties)
     } else {
       setHoverElectorate(false)
+    }
+  }
+
+  const handleMapClick = e => {
+    if (!mapEl) return
+
+    var states = mapEl.current.queryRenderedFeatures(e.point, {
+      layers: interactiveLayers,
+    })
+
+    if (states.length) {
+      console.log(states)
+      // setHoverElectorate(states[0].properties)
+    } else {
+      // setHoverElectorate(false)
     }
   }
 
@@ -298,27 +359,30 @@ const Map = () => {
       mapStyle="mapbox://styles/mapbox/light-v10"
       {...viewport}
       ref={mapEl}
+      attributionControl={false}
       onViewportChange={setViewport}
       mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_API_KEY}
       onMouseMove={onMouse}
+      // onClick={handleMapClick}
+      touchZoom={true}
       onLoad={e => setRegions(generateElectoralRegions())}
       interactiveLayerIds={interactiveLayers}
     >
       <div style={navStyle}>
-        <NavigationControl />
+        <NavigationControl showCompass={false} />
       </div>
 
       <MapOverlay electorate={hoverElectorate} />
 
       {popup && <GrantInfo feature={popup} onClick={() => setPopup(false)} />}
 
-      {/* <MapPins data={grantsPlots} onClick={setPopup} /> */}
+      <MapPins data={grantsPlots} onClick={setPopup} />
 
       <Source
         type="vector"
         url="mapbox://infotorch.ck783c07m4wll2kr7ilroev1u-7fg8b"
       >
-        <Layer {...grantsLayer} />
+        {/* <Layer {...grantsLayer} /> */}
       </Source>
 
       {/* <Source id="points" type="geojson" data={grantsPlots}>
@@ -327,6 +391,7 @@ const Map = () => {
       <Source type="geojson" data={electorateLabels}>
         <Layer {...election_2016_labels} />
       </Source>
+
       <Source type="vector" url="mapbox://infotorch.1jcf72om">
         {regions}
       </Source>
