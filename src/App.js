@@ -16,7 +16,9 @@ import DialogHost from "./components/DialogHost"
 import NotFoundContent from "./components/NotFound"
 
 import HomeContent from "./HomePage"
-import Map from "./projects/sportsgrants/Map"
+import SportsGrantsMap from "./projects/sportsgrants/Map"
+import SportsGrantsData from "./projects/sportsgrants/Data"
+import ClimateActNow from "./projects/climateact/Data"
 
 const drawerWidth = 256
 
@@ -167,8 +169,15 @@ const App = () => {
                     <HomeContent openSnackbar={openSnackbar} />
                   </Route>
 
+                  <Route path="/sportsgrants" exact>
+                    <SportsGrantsData openSnackbar={openSnackbar} />
+                  </Route>
                   <Route path="/sportsgrants/map" exact>
-                    <Map openSnackbar={openSnackbar} />
+                    <SportsGrantsMap openSnackbar={openSnackbar} />
+                  </Route>
+
+                  <Route path="/climateact" exact>
+                    <ClimateActNow openSnackbar={openSnackbar} />
                   </Route>
 
                   <Route>
