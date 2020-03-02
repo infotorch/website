@@ -1,155 +1,2370 @@
 {
-"type": "FeatureCollection",
-"features": [
-{ "type": "Feature", "properties": { "State": "NT", "Sortname": "Lingiari" }, "geometry": { "type": "Point", "coordinates": [ 133.500819, -21.499103 ] } },
-{ "type": "Feature", "properties": { "State": "NT", "Sortname": "Solomon" }, "geometry": { "type": "Point", "coordinates": [ 130.935532662102588, -12.423923966423963 ] } },
-{ "type": "Feature", "properties": { "State": "TAS", "Sortname": "Bass" }, "geometry": { "type": "Point", "coordinates": [ 147.508082708335081, -41.15828355360523 ] } },
-{ "type": "Feature", "properties": { "State": "TAS", "Sortname": "Braddon" }, "geometry": { "type": "Point", "coordinates": [ 145.498522043171249, -41.759953372427539 ] } },
-{ "type": "Feature", "properties": { "State": "TAS", "Sortname": "Denison" }, "geometry": { "type": "Point", "coordinates": [ 147.243945495524798, -42.888356082374102 ] } },
-{ "type": "Feature", "properties": { "State": "TAS", "Sortname": "Franklin" }, "geometry": { "type": "Point", "coordinates": [ 146.6301215, -43.245191 ] } },
-{ "type": "Feature", "properties": { "State": "TAS", "Sortname": "Lyons" }, "geometry": { "type": "Point", "coordinates": [ 147.052825325569501, -42.059543590009035 ] } },
-{ "type": "Feature", "properties": { "State": "QLD", "Sortname": "BLAIR" }, "geometry": { "type": "Point", "coordinates": [ 152.46177404111404, -27.115195573340337 ] } },
-{ "type": "Feature", "properties": { "State": "QLD", "Sortname": "BONNER" }, "geometry": { "type": "Point", "coordinates": [ 153.139813457888948, -27.504262456660893 ] } },
-{ "type": "Feature", "properties": { "State": "QLD", "Sortname": "BOWMAN" }, "geometry": { "type": "Point", "coordinates": [ 153.454370239632766, -27.546411173400013 ] } },
-{ "type": "Feature", "properties": { "State": "QLD", "Sortname": "BRISBANE" }, "geometry": { "type": "Point", "coordinates": [ 153.013605, -27.442345 ] } },
-{ "type": "Feature", "properties": { "State": "QLD", "Sortname": "CAPRICORNIA" }, "geometry": { "type": "Point", "coordinates": [ 148.4540805, -21.925345 ] } },
-{ "type": "Feature", "properties": { "State": "QLD", "Sortname": "DAWSON" }, "geometry": { "type": "Point", "coordinates": [ 147.979305953684843, -20.200998928696258 ] } },
-{ "type": "Feature", "properties": { "State": "QLD", "Sortname": "DICKSON" }, "geometry": { "type": "Point", "coordinates": [ 152.847446175779595, -27.270993671423291 ] } },
-{ "type": "Feature", "properties": { "State": "QLD", "Sortname": "FADDEN" }, "geometry": { "type": "Point", "coordinates": [ 153.334836676226587, -27.81605035860758 ] } },
-{ "type": "Feature", "properties": { "State": "QLD", "Sortname": "FAIRFAX" }, "geometry": { "type": "Point", "coordinates": [ 153.003166, -26.582809 ] } },
-{ "type": "Feature", "properties": { "State": "QLD", "Sortname": "FISHER" }, "geometry": { "type": "Point", "coordinates": [ 152.898824505775139, -26.788761762350202 ] } },
-{ "type": "Feature", "properties": { "State": "QLD", "Sortname": "FLYNN" }, "geometry": { "type": "Point", "coordinates": [ 149.65697206157526, -24.495487272838467 ] } },
-{ "type": "Feature", "properties": { "State": "QLD", "Sortname": "FORDE" }, "geometry": { "type": "Point", "coordinates": [ 153.180555396366145, -27.761691142212793 ] } },
-{ "type": "Feature", "properties": { "State": "QLD", "Sortname": "GRIFFITH" }, "geometry": { "type": "Point", "coordinates": [ 153.061869690323107, -27.48648477825078 ] } },
-{ "type": "Feature", "properties": { "State": "QLD", "Sortname": "GROOM" }, "geometry": { "type": "Point", "coordinates": [ 151.653301973623712, -27.483759857251886 ] } },
-{ "type": "Feature", "properties": { "State": "QLD", "Sortname": "HERBERT" }, "geometry": { "type": "Point", "coordinates": [ 146.553586, -19.264834 ] } },
-{ "type": "Feature", "properties": { "State": "QLD", "Sortname": "HINKLER" }, "geometry": { "type": "Point", "coordinates": [ 152.346150500000022, -25.1216485 ] } },
-{ "type": "Feature", "properties": { "State": "QLD", "Sortname": "KENNEDY" }, "geometry": { "type": "Point", "coordinates": [ 142.907553250000035, -18.78470975 ] } },
-{ "type": "Feature", "properties": { "State": "QLD", "Sortname": "LEICHHARDT" }, "geometry": { "type": "Point", "coordinates": [ 142.5073815, -13.7701145 ] } },
-{ "type": "Feature", "properties": { "State": "QLD", "Sortname": "LILLEY" }, "geometry": { "type": "Point", "coordinates": [ 153.068028, -27.362114 ] } },
-{ "type": "Feature", "properties": { "State": "QLD", "Sortname": "LONGMAN" }, "geometry": { "type": "Point", "coordinates": [ 152.8804565, -27.0211985 ] } },
-{ "type": "Feature", "properties": { "State": "QLD", "Sortname": "MARANOA" }, "geometry": { "type": "Point", "coordinates": [ 143.408802937500013, -24.751078687499998 ] } },
-{ "type": "Feature", "properties": { "State": "QLD", "Sortname": "MCPHERSON" }, "geometry": { "type": "Point", "coordinates": [ 153.423217, -28.1406495 ] } },
-{ "type": "Feature", "properties": { "State": "QLD", "Sortname": "MONCRIEFF" }, "geometry": { "type": "Point", "coordinates": [ 153.384592526017883, -28.008399264764993 ] } },
-{ "type": "Feature", "properties": { "State": "QLD", "Sortname": "MORETON" }, "geometry": { "type": "Point", "coordinates": [ 153.021201500000018, -27.5590285 ] } },
-{ "type": "Feature", "properties": { "State": "QLD", "Sortname": "OXLEY" }, "geometry": { "type": "Point", "coordinates": [ 152.932797, -27.606673 ] } },
-{ "type": "Feature", "properties": { "State": "QLD", "Sortname": "PETRIE" }, "geometry": { "type": "Point", "coordinates": [ 153.048251, -27.256537 ] } },
-{ "type": "Feature", "properties": { "State": "QLD", "Sortname": "RANKIN" }, "geometry": { "type": "Point", "coordinates": [ 153.071259, -27.643779 ] } },
-{ "type": "Feature", "properties": { "State": "QLD", "Sortname": "RYAN" }, "geometry": { "type": "Point", "coordinates": [ 152.851205762849958, -27.470301667197571 ] } },
-{ "type": "Feature", "properties": { "State": "QLD", "Sortname": "WIDE BAY" }, "geometry": { "type": "Point", "coordinates": [ 152.455873, -25.954035 ] } },
-{ "type": "Feature", "properties": { "State": "QLD", "Sortname": "Wright" }, "geometry": { "type": "Point", "coordinates": [ 152.674021158575385, -27.91710629194473 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "Aston" }, "geometry": { "type": "Point", "coordinates": [ 145.2544095, -37.9013035 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "Ballarat" }, "geometry": { "type": "Point", "coordinates": [ 143.9534815, -37.5059905 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "Batman" }, "geometry": { "type": "Point", "coordinates": [ 145.015908353689099, -37.733353146288529 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "Bendigo" }, "geometry": { "type": "Point", "coordinates": [ 144.329018028475986, -36.902826227104228 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "Bruce" }, "geometry": { "type": "Point", "coordinates": [ 145.183782438750285, -37.927479878399353 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "Calwell" }, "geometry": { "type": "Point", "coordinates": [ 144.873486628403327, -37.665859794245655 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "Casey" }, "geometry": { "type": "Point", "coordinates": [ 145.737084, -37.7217025 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "Chisholm" }, "geometry": { "type": "Point", "coordinates": [ 145.124510719394948, -37.862653880662009 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "Corangamite" }, "geometry": { "type": "Point", "coordinates": [ 143.864302, -38.240689 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "Corio" }, "geometry": { "type": "Point", "coordinates": [ 144.423556243371735, -38.029708773856086 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "Deakin" }, "geometry": { "type": "Point", "coordinates": [ 145.183544, -37.818006 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "Dunkley" }, "geometry": { "type": "Point", "coordinates": [ 145.137971475920324, -38.170110879836912 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "Flinders" }, "geometry": { "type": "Point", "coordinates": [ 145.3425685, -38.3521225 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "Gellibrand" }, "geometry": { "type": "Point", "coordinates": [ 144.840170716680376, -37.830984443621922 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "Gippsland" }, "geometry": { "type": "Point", "coordinates": [ 147.77902875, -37.13526825 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "Goldstein" }, "geometry": { "type": "Point", "coordinates": [ 145.019324499999982, -37.9398605 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "Gorton" }, "geometry": { "type": "Point", "coordinates": [ 144.635126690427143, -37.697681219783149 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "Higgins" }, "geometry": { "type": "Point", "coordinates": [ 145.046365698922187, -37.863271143425784 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "Holt" }, "geometry": { "type": "Point", "coordinates": [ 145.27690429151761, -38.043320642928961 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "Hotham" }, "geometry": { "type": "Point", "coordinates": [ 145.0859565, -37.9413825 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "Indi" }, "geometry": { "type": "Point", "coordinates": [ 146.634656492038999, -36.718408232099819 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "Isaacs" }, "geometry": { "type": "Point", "coordinates": [ 145.171894506492606, -38.040694898648084 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "Jagajaga" }, "geometry": { "type": "Point", "coordinates": [ 145.14901331578298, -37.716872984534639 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "Kooyong" }, "geometry": { "type": "Point", "coordinates": [ 145.058858, -37.813624 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "La Trobe" }, "geometry": { "type": "Point", "coordinates": [ 145.424773653388883, -37.972905821564062 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "Lalor" }, "geometry": { "type": "Point", "coordinates": [ 144.630372, -37.892762 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "Mallee" }, "geometry": { "type": "Point", "coordinates": [ 142.202900356638622, -35.774690677852476 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "Maribyrnong" }, "geometry": { "type": "Point", "coordinates": [ 144.861763885560435, -37.753245652565305 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "McEwen" }, "geometry": { "type": "Point", "coordinates": [ 144.9436125, -37.2770865 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "Mcmillan" }, "geometry": { "type": "Point", "coordinates": [ 146.0090395, -38.5585045 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "Melbourne" }, "geometry": { "type": "Point", "coordinates": [ 144.956507773995838, -37.801705910008344 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "Melbourne Ports" }, "geometry": { "type": "Point", "coordinates": [ 144.972470413201677, -37.852193675897368 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "Menzies" }, "geometry": { "type": "Point", "coordinates": [ 145.195412076705082, -37.762843674778615 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "Murray" }, "geometry": { "type": "Point", "coordinates": [ 145.147102, -36.412699 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "Scullin" }, "geometry": { "type": "Point", "coordinates": [ 144.9979195, -37.6517355 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "Wannon" }, "geometry": { "type": "Point", "coordinates": [ 141.9916725, -37.7470505 ] } },
-{ "type": "Feature", "properties": { "State": "VIC", "Sortname": "Wills" }, "geometry": { "type": "Point", "coordinates": [ 144.94503893970321, -37.729927974600493 ] } },
-{ "type": "Feature", "properties": { "State": "SA", "Sortname": "Adelaide" }, "geometry": { "type": "Point", "coordinates": [ 138.5998555, -34.9246665 ] } },
-{ "type": "Feature", "properties": { "State": "SA", "Sortname": "Barker" }, "geometry": { "type": "Point", "coordinates": [ 139.944571, -34.886333 ] } },
-{ "type": "Feature", "properties": { "State": "SA", "Sortname": "Boothby" }, "geometry": { "type": "Point", "coordinates": [ 138.596513375249231, -35.018388551445781 ] } },
-{ "type": "Feature", "properties": { "State": "SA", "Sortname": "Grey" }, "geometry": { "type": "Point", "coordinates": [ 135.454147962601155, -29.602587652345996 ] } },
-{ "type": "Feature", "properties": { "State": "SA", "Sortname": "Hindmarsh" }, "geometry": { "type": "Point", "coordinates": [ 138.528591865498498, -34.935832443601264 ] } },
-{ "type": "Feature", "properties": { "State": "SA", "Sortname": "Kingston" }, "geometry": { "type": "Point", "coordinates": [ 138.524661, -35.101492 ] } },
-{ "type": "Feature", "properties": { "State": "SA", "Sortname": "Makin" }, "geometry": { "type": "Point", "coordinates": [ 138.689800512493548, -34.800124846401104 ] } },
-{ "type": "Feature", "properties": { "State": "SA", "Sortname": "Mayo" }, "geometry": { "type": "Point", "coordinates": [ 138.748987020356509, -35.245648336179798 ] } },
-{ "type": "Feature", "properties": { "State": "SA", "Sortname": "Port Adelaide" }, "geometry": { "type": "Point", "coordinates": [ 138.559943, -34.8085495 ] } },
-{ "type": "Feature", "properties": { "State": "SA", "Sortname": "Sturt" }, "geometry": { "type": "Point", "coordinates": [ 138.673300031198551, -34.895195540454871 ] } },
-{ "type": "Feature", "properties": { "State": "SA", "Sortname": "Wakefield" }, "geometry": { "type": "Point", "coordinates": [ 138.610706, -34.266576 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Banks" }, "geometry": { "type": "Point", "coordinates": [ 151.055067, -33.967791 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Barton" }, "geometry": { "type": "Point", "coordinates": [ 151.127450690866254, -33.94086564786997 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Bennelong" }, "geometry": { "type": "Point", "coordinates": [ 151.098582744789866, -33.794537033269272 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Berowra" }, "geometry": { "type": "Point", "coordinates": [ 151.047160952212124, -33.569159632882617 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Blaxland" }, "geometry": { "type": "Point", "coordinates": [ 151.008954987353178, -33.896382058927436 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Bradfield" }, "geometry": { "type": "Point", "coordinates": [ 151.150523588808881, -33.734792273946532 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Calare" }, "geometry": { "type": "Point", "coordinates": [ 149.477699053657801, -33.08729729284817 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Chifley" }, "geometry": { "type": "Point", "coordinates": [ 150.8329845, -33.7245905 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Cook" }, "geometry": { "type": "Point", "coordinates": [ 151.133582, -34.02106 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Cowper" }, "geometry": { "type": "Point", "coordinates": [ 152.7121985, -30.836878 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Cunningham" }, "geometry": { "type": "Point", "coordinates": [ 150.867927582511072, -34.321001491425129 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Dobell" }, "geometry": { "type": "Point", "coordinates": [ 151.369119565354737, -33.247471124137753 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Eden-Monaro" }, "geometry": { "type": "Point", "coordinates": [ 148.951523, -36.0203635 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Farrer" }, "geometry": { "type": "Point", "coordinates": [ 144.44964250000001, -34.400587 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Fowler" }, "geometry": { "type": "Point", "coordinates": [ 150.91449750000001, -33.895109 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Gilmore" }, "geometry": { "type": "Point", "coordinates": [ 150.339934, -35.332919 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Grayndler" }, "geometry": { "type": "Point", "coordinates": [ 151.1578795, -33.8845905 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Greenway" }, "geometry": { "type": "Point", "coordinates": [ 150.908961, -33.7289455 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Hughes" }, "geometry": { "type": "Point", "coordinates": [ 151.00883, -34.049611 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Hume" }, "geometry": { "type": "Point", "coordinates": [ 149.725847499999986, -34.5490335 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Hunter" }, "geometry": { "type": "Point", "coordinates": [ 150.924834039337185, -32.656835516965657 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Kingsford Smith" }, "geometry": { "type": "Point", "coordinates": [ 151.206124499999987, -33.9588175 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Lindsay" }, "geometry": { "type": "Point", "coordinates": [ 150.700218, -33.763552 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Lyne" }, "geometry": { "type": "Point", "coordinates": [ 152.09696496027297, -31.960608482520779 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Macarthur" }, "geometry": { "type": "Point", "coordinates": [ 150.8317625, -34.0805775 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Mackellar" }, "geometry": { "type": "Point", "coordinates": [ 151.251888, -33.6724955 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Macquarie" }, "geometry": { "type": "Point", "coordinates": [ 150.649725, -33.479758 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "McMahon" }, "geometry": { "type": "Point", "coordinates": [ 150.812957, -33.831244 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Mitchell" }, "geometry": { "type": "Point", "coordinates": [ 150.959175200175991, -33.711098185148344 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "New England" }, "geometry": { "type": "Point", "coordinates": [ 151.282305630663359, -30.453268098576032 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Newcastle" }, "geometry": { "type": "Point", "coordinates": [ 151.708913669252183, -32.891803179949868 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "North Sydney" }, "geometry": { "type": "Point", "coordinates": [ 151.184647018476113, -33.820587397188625 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Page" }, "geometry": { "type": "Point", "coordinates": [ 152.856387, -29.730809 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Parkes" }, "geometry": { "type": "Point", "coordinates": [ 145.575229864658496, -30.926151958094877 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Parramatta" }, "geometry": { "type": "Point", "coordinates": [ 151.007003, -33.8100855 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Paterson" }, "geometry": { "type": "Point", "coordinates": [ 151.800326, -32.758691 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Reid" }, "geometry": { "type": "Point", "coordinates": [ 151.092774057683641, -33.854763983472694 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Richmond" }, "geometry": { "type": "Point", "coordinates": [ 153.411500799618864, -28.478302525942411 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Riverina" }, "geometry": { "type": "Point", "coordinates": [ 147.65487383397479, -34.164770000340042 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Robertson" }, "geometry": { "type": "Point", "coordinates": [ 151.212924427634562, -33.382282659826259 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Shortland" }, "geometry": { "type": "Point", "coordinates": [ 151.622755, -33.132137 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Sydney" }, "geometry": { "type": "Point", "coordinates": [ 151.20036189524788, -33.885841901217127 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Warringah" }, "geometry": { "type": "Point", "coordinates": [ 151.256282257210131, -33.798228530523843 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Watson" }, "geometry": { "type": "Point", "coordinates": [ 151.074512676275845, -33.907960767994517 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Wentworth" }, "geometry": { "type": "Point", "coordinates": [ 151.25285150000002, -33.8770225 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Werriwa" }, "geometry": { "type": "Point", "coordinates": [ 150.824397874183234, -33.928509308082319 ] } },
-{ "type": "Feature", "properties": { "State": "NSW", "Sortname": "Whitlam" }, "geometry": { "type": "Point", "coordinates": [ 150.581829640113341, -34.522517308440406 ] } },
-{ "type": "Feature", "properties": { "State": "ACT", "Sortname": "Canberra" }, "geometry": { "type": "Point", "coordinates": [ 148.971382797394682, -35.537436701660461 ] } },
-{ "type": "Feature", "properties": { "State": "ACT", "Sortname": "Fenner" }, "geometry": { "type": "Point", "coordinates": [ 149.159653234539661, -35.243079640155166 ] } },
-{ "type": "Feature", "properties": { "State": "WA", "Sortname": "Brand" }, "geometry": { "type": "Point", "coordinates": [ 115.805737936764444, -32.310611575540804 ] } },
-{ "type": "Feature", "properties": { "State": "WA", "Sortname": "Canning" }, "geometry": { "type": "Point", "coordinates": [ 116.11434944189871, -32.623701242368035 ] } },
-{ "type": "Feature", "properties": { "State": "WA", "Sortname": "Cowan" }, "geometry": { "type": "Point", "coordinates": [ 115.8637965, -31.7980865 ] } },
-{ "type": "Feature", "properties": { "State": "WA", "Sortname": "Curtin" }, "geometry": { "type": "Point", "coordinates": [ 115.790063204158358, -31.954239244218712 ] } },
-{ "type": "Feature", "properties": { "State": "WA", "Sortname": "Durack" }, "geometry": { "type": "Point", "coordinates": [ 119.593328875, -23.869076625 ] } },
-{ "type": "Feature", "properties": { "State": "WA", "Sortname": "Forrest" }, "geometry": { "type": "Point", "coordinates": [ 115.6072095, -33.8528495 ] } },
-{ "type": "Feature", "properties": { "State": "WA", "Sortname": "Fremantle" }, "geometry": { "type": "Point", "coordinates": [ 115.819117155404143, -32.115840123142398 ] } },
-{ "type": "Feature", "properties": { "State": "WA", "Sortname": "Hasluck" }, "geometry": { "type": "Point", "coordinates": [ 116.196694676906645, -31.876309646323104 ] } },
-{ "type": "Feature", "properties": { "State": "WA", "Sortname": "Moore" }, "geometry": { "type": "Point", "coordinates": [ 115.762608728090839, -31.778597561600264 ] } },
-{ "type": "Feature", "properties": { "State": "WA", "Sortname": "Burt" }, "geometry": { "type": "Point", "coordinates": [ 115.9629745, -32.1081625 ] } },
-{ "type": "Feature", "properties": { "State": "WA", "Sortname": "O'Connor" }, "geometry": { "type": "Point", "coordinates": [ 123.720262312499983, -30.014815437500001 ] } },
-{ "type": "Feature", "properties": { "State": "WA", "Sortname": "Pearce" }, "geometry": { "type": "Point", "coordinates": [ 115.62919925, -31.25820825 ] } },
-{ "type": "Feature", "properties": { "State": "WA", "Sortname": "Perth" }, "geometry": { "type": "Point", "coordinates": [ 115.890787440000139, -31.920669014559518 ] } },
-{ "type": "Feature", "properties": { "State": "WA", "Sortname": "Stirling" }, "geometry": { "type": "Point", "coordinates": [ 115.823305966993175, -31.875282629635674 ] } },
-{ "type": "Feature", "properties": { "State": "WA", "Sortname": "Swan" }, "geometry": { "type": "Point", "coordinates": [ 115.929820688241207, -31.974876212728869 ] } },
-{ "type": "Feature", "properties": { "State": "WA", "Sortname": "Tangney" }, "geometry": { "type": "Point", "coordinates": [ 115.824103, -32.039376 ] } }
-]
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": { "name": "urn:ogc:def:crs:EPSG::4283" }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Bean",
+        "candidate": "David Smith",
+        "state": "ACT",
+        "party": "ALP",
+        "margin_votes": 13971,
+        "margin": 15.04,
+        "marginality": "Safe",
+        "swing": 1.33
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [148.963522753988116, -35.548460908986435]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Canberra",
+        "candidate": "Alicia Payne",
+        "state": "ACT",
+        "party": "ALP",
+        "margin_votes": 29519,
+        "margin": 34.16,
+        "marginality": "Very Safe",
+        "swing": -4.14
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [149.193183970849958, -35.287930743533799]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Fenner",
+        "candidate": "Andrew Leigh",
+        "state": "ACT",
+        "party": "ALP",
+        "margin_votes": 18291,
+        "margin": 21.12,
+        "marginality": "Very Safe",
+        "swing": 1.28
+      },
+      "geometry": { "type": "Point", "coordinates": [149.0393235, -35.2024955] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Lingiari",
+        "candidate": "Warren Snowdon",
+        "state": "NT",
+        "party": "ALP",
+        "margin_votes": 5292,
+        "margin": 10.92,
+        "marginality": "Safe",
+        "swing": 2.73
+      },
+      "geometry": { "type": "Point", "coordinates": [133.500819, -21.499103] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Solomon",
+        "candidate": "Luke Gosling",
+        "state": "NT",
+        "party": "ALP",
+        "margin_votes": 3396,
+        "margin": 6.16,
+        "marginality": "Fairly Safe",
+        "swing": 3.01
+      },
+      "geometry": { "type": "Point", "coordinates": [130.9078975, -12.435658] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Blair",
+        "candidate": "Shayne Neumann",
+        "state": "QLD",
+        "party": "ALP",
+        "margin_votes": 2321,
+        "margin": 2.42,
+        "marginality": "Marginal",
+        "swing": 6.93
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [152.465415627022367, -27.119671855119307]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Bonner",
+        "candidate": "Ross Vasta",
+        "state": "QLD",
+        "party": "LNP",
+        "margin_votes": 13957,
+        "margin": 14.82,
+        "marginality": "Safe",
+        "swing": 4.02
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [153.290587571844924, -27.316593705938377]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Bowman",
+        "candidate": "Andrew Laming",
+        "state": "QLD",
+        "party": "LNP",
+        "margin_votes": 20135,
+        "margin": 20.48,
+        "marginality": "Very Safe",
+        "swing": 3.17
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [153.354983240075001, -27.550072438846996]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Brisbane",
+        "candidate": "Trevor Evans",
+        "state": "QLD",
+        "party": "LNP",
+        "margin_votes": 10033,
+        "margin": 9.84,
+        "marginality": "Fairly Safe",
+        "swing": -1.08
+      },
+      "geometry": { "type": "Point", "coordinates": [153.013605, -27.442345] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Capricornia",
+        "candidate": "Michelle Landry",
+        "state": "QLD",
+        "party": "LNP",
+        "margin_votes": 21983,
+        "margin": 24.7,
+        "marginality": "Very Safe",
+        "swing": 11.72
+      },
+      "geometry": { "type": "Point", "coordinates": [147.662225, -21.925265] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Dawson",
+        "candidate": "George Christensen",
+        "state": "QLD",
+        "party": "LNP",
+        "margin_votes": 25959,
+        "margin": 29.22,
+        "marginality": "Very Safe",
+        "swing": 11.24
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [149.288636346520263, -20.294891553864886]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Dickson",
+        "candidate": "Peter Dutton",
+        "state": "QLD",
+        "party": "LNP",
+        "margin_votes": 8988,
+        "margin": 9.28,
+        "marginality": "Fairly Safe",
+        "swing": 2.95
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [152.848245652008444, -27.271562518041364]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Fadden",
+        "candidate": "Stuart Robert",
+        "state": "QLD",
+        "party": "LNP",
+        "margin_votes": 27562,
+        "margin": 28.36,
+        "marginality": "Very Safe",
+        "swing": 2.94
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [153.348534482103304, -27.817049254652545]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Fairfax",
+        "candidate": "Ted O'brien",
+        "state": "QLD",
+        "party": "LNP",
+        "margin_votes": 26248,
+        "margin": 26.88,
+        "marginality": "Very Safe",
+        "swing": 2.57
+      },
+      "geometry": { "type": "Point", "coordinates": [153.003166, -26.582809] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Fisher",
+        "candidate": "Andrew Wallace",
+        "state": "QLD",
+        "party": "LNP",
+        "margin_votes": 25152,
+        "margin": 25.4,
+        "marginality": "Very Safe",
+        "swing": 3.55
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [152.903912389859812, -26.788544921932154]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Flynn",
+        "candidate": "Ken O'dowd",
+        "state": "QLD",
+        "party": "LNP",
+        "margin_votes": 15487,
+        "margin": 17.32,
+        "marginality": "Safe",
+        "swing": 7.62
+      },
+      "geometry": { "type": "Point", "coordinates": [149.9185395, -24.5665105] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Forde",
+        "candidate": "Bert Van Manen",
+        "state": "QLD",
+        "party": "LNP",
+        "margin_votes": 15736,
+        "margin": 17.2,
+        "marginality": "Safe",
+        "swing": 7.97
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [153.180598869233961, -27.761725953026907]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Griffith",
+        "candidate": "Terri Butler",
+        "state": "QLD",
+        "party": "ALP",
+        "margin_votes": 5701,
+        "margin": 5.72,
+        "marginality": "Marginal",
+        "swing": -1.43
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [153.062757938698041, -27.485333359349529]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Groom",
+        "candidate": "John Mcveigh",
+        "state": "QLD",
+        "party": "LNP",
+        "margin_votes": 39100,
+        "margin": 40.96,
+        "marginality": "Very Safe",
+        "swing": 5.17
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [151.653488509254714, -27.48382780511691]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Herbert",
+        "candidate": "Phillip Thompson",
+        "state": "QLD",
+        "party": "LNP",
+        "margin_votes": 15365,
+        "margin": 16.72,
+        "marginality": "Safe",
+        "swing": 8.38
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [147.410583141777664, -18.975164008358714]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Hinkler",
+        "candidate": "Keith Pitt",
+        "state": "QLD",
+        "party": "LNP",
+        "margin_votes": 26701,
+        "margin": 29.0,
+        "marginality": "Very Safe",
+        "swing": 6.12
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [152.628853574378354, -25.100823292174674]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Kennedy",
+        "candidate": "Bob Katter",
+        "state": "QLD",
+        "party": "LNP",
+        "margin_votes": 26690,
+        "margin": 29.02,
+        "marginality": "Very Safe",
+        "swing": 7.77
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [140.937619499999983, -18.7837115]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Leichhardt",
+        "candidate": "Warren Entsch",
+        "state": "QLD",
+        "party": "LNP",
+        "margin_votes": 7491,
+        "margin": 8.34,
+        "marginality": "Fairly Safe",
+        "swing": 0.22
+      },
+      "geometry": { "type": "Point", "coordinates": [142.337207, -13.020137] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Lilley",
+        "candidate": "Anika Wells",
+        "state": "QLD",
+        "party": "ALP",
+        "margin_votes": 1229,
+        "margin": 1.28,
+        "marginality": "Marginal",
+        "swing": 5.04
+      },
+      "geometry": { "type": "Point", "coordinates": [153.06786, -27.361027] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Longman",
+        "candidate": "Terry Young",
+        "state": "QLD",
+        "party": "LNP",
+        "margin_votes": 6525,
+        "margin": 6.56,
+        "marginality": "Fairly Safe",
+        "swing": 4.07
+      },
+      "geometry": { "type": "Point", "coordinates": [152.880195, -27.021256] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Maranoa",
+        "candidate": "David Littleproud",
+        "state": "QLD",
+        "party": "LNP",
+        "margin_votes": 47162,
+        "margin": 50.84,
+        "marginality": "Very Safe",
+        "swing": 7.88
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [143.408349875, -24.751449375]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "McPherson",
+        "candidate": "Karen Andrews",
+        "state": "QLD",
+        "party": "LNP",
+        "margin_votes": 22569,
+        "margin": 24.4,
+        "marginality": "Very Safe",
+        "swing": 0.56
+      },
+      "geometry": { "type": "Point", "coordinates": [153.423217, -28.1406495] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Moncrieff",
+        "candidate": "Angie Bell",
+        "state": "QLD",
+        "party": "LNP",
+        "margin_votes": 28239,
+        "margin": 30.72,
+        "marginality": "Very Safe",
+        "swing": 0.75
+      },
+      "geometry": { "type": "Point", "coordinates": [153.366539, -28.0052185] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Moreton",
+        "candidate": "Graham Perrett",
+        "state": "QLD",
+        "party": "ALP",
+        "margin_votes": 3448,
+        "margin": 3.8,
+        "marginality": "Marginal",
+        "swing": 2.12
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [153.032486884704781, -27.562744848984732]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Oxley",
+        "candidate": "Milton Dick",
+        "state": "QLD",
+        "party": "ALP",
+        "margin_votes": 11577,
+        "margin": 12.78,
+        "marginality": "Safe",
+        "swing": 2.62
+      },
+      "geometry": { "type": "Point", "coordinates": [152.932801, -27.606673] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Petrie",
+        "candidate": "Luke Howarth",
+        "state": "QLD",
+        "party": "LNP",
+        "margin_votes": 17065,
+        "margin": 16.8,
+        "marginality": "Safe",
+        "swing": 6.75
+      },
+      "geometry": { "type": "Point", "coordinates": [153.048251, -27.256537] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Rankin",
+        "candidate": "Jim Chalmers",
+        "state": "QLD",
+        "party": "ALP",
+        "margin_votes": 10922,
+        "margin": 12.88,
+        "marginality": "Safe",
+        "swing": 4.86
+      },
+      "geometry": { "type": "Point", "coordinates": [153.071299, -27.643739] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Ryan",
+        "candidate": "Julian Simmonds",
+        "state": "QLD",
+        "party": "LNP",
+        "margin_votes": 11620,
+        "margin": 12.06,
+        "marginality": "Safe",
+        "swing": -2.95
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [152.863573827305373, -27.459851622781912]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Wide Bay",
+        "candidate": "Llew O'brien",
+        "state": "QLD",
+        "party": "LNP",
+        "margin_votes": 24686,
+        "margin": 26.3,
+        "marginality": "Very Safe",
+        "swing": 4.96
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [152.565714328926589, -25.917606695407045]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Wright",
+        "candidate": "Scott Buchholz",
+        "state": "QLD",
+        "party": "LNP",
+        "margin_votes": 28249,
+        "margin": 29.16,
+        "marginality": "Very Safe",
+        "swing": 4.96
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [152.674047938464497, -27.91714919602056]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Adelaide",
+        "candidate": "Steve Georganas",
+        "state": "SA",
+        "party": "ALP",
+        "margin_votes": 17543,
+        "margin": 16.36,
+        "marginality": "Safe",
+        "swing": 0.12
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [138.589026086213011, -34.902545381764973]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Barker",
+        "candidate": "Tony Pasin",
+        "state": "SA",
+        "party": "LP",
+        "margin_votes": 40036,
+        "margin": 37.88,
+        "marginality": "Very Safe",
+        "swing": 5.07
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [140.180923030713672, -35.512663311659701]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Boothby",
+        "candidate": "Nicolle Flint",
+        "state": "SA",
+        "party": "LP",
+        "margin_votes": 3047,
+        "margin": 2.76,
+        "marginality": "Marginal",
+        "swing": -1.33
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [138.584338946967847, -35.002138713890687]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Grey",
+        "candidate": "Rowan Ramsey",
+        "state": "SA",
+        "party": "LP",
+        "margin_votes": 27561,
+        "margin": 26.64,
+        "marginality": "Very Safe",
+        "swing": 5.57
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [135.47118829380625, -29.628323647097897]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Hindmarsh",
+        "candidate": "Mark Butler",
+        "state": "SA",
+        "party": "ALP",
+        "margin_votes": 14257,
+        "margin": 13.08,
+        "marginality": "Safe",
+        "swing": 1.89
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [138.51856136119639, -34.874217191069931]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Kingston",
+        "candidate": "Amanda Rishworth",
+        "state": "SA",
+        "party": "ALP",
+        "margin_votes": 25335,
+        "margin": 23.88,
+        "marginality": "Very Safe",
+        "swing": 1.61
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [138.5335117422336, -35.119787458135811]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Makin",
+        "candidate": "Tony Zappia",
+        "state": "SA",
+        "party": "ALP",
+        "margin_votes": 20748,
+        "margin": 19.44,
+        "marginality": "Very Safe",
+        "swing": 1.07
+      },
+      "geometry": { "type": "Point", "coordinates": [138.720921, -34.792055] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Mayo",
+        "candidate": "Rebekha Sharkie",
+        "state": "SA",
+        "party": "LP",
+        "margin_votes": 5734,
+        "margin": 5.08,
+        "marginality": "Marginal",
+        "swing": -0.73
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [138.73390974370318, -35.268887708678811]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Spence",
+        "candidate": "Nick Champion",
+        "state": "SA",
+        "party": "ALP",
+        "margin_votes": 28719,
+        "margin": 28.26,
+        "marginality": "Very Safe",
+        "swing": 3.04
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [138.670726560691747, -34.681697906214346]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Sturt",
+        "candidate": "James Stevens",
+        "state": "SA",
+        "party": "LP",
+        "margin_votes": 15076,
+        "margin": 13.74,
+        "marginality": "Safe",
+        "swing": 1.48
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [138.669163120392938, -34.897584007997246]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Bass",
+        "candidate": "Bridget Archer",
+        "state": "TAS",
+        "party": "LP",
+        "margin_votes": 563,
+        "margin": 0.82,
+        "marginality": "Marginal",
+        "swing": 5.83
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [147.440679591651872, -41.168192051272065]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Braddon",
+        "candidate": "Gavin Pearce",
+        "state": "TAS",
+        "party": "LP",
+        "margin_votes": 4329,
+        "margin": 6.18,
+        "marginality": "Fairly Safe",
+        "swing": 4.82
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [145.526092973742152, -41.746927300563968]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Clark",
+        "candidate": "Andrew Wilkie",
+        "state": "TAS",
+        "party": "ALP",
+        "margin_votes": 21823,
+        "margin": 32.34,
+        "marginality": "Very Safe",
+        "swing": -0.84
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [147.243283096361239, -42.889272274603421]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Franklin",
+        "candidate": "Julie Collins",
+        "state": "TAS",
+        "party": "ALP",
+        "margin_votes": 17151,
+        "margin": 24.42,
+        "marginality": "Very Safe",
+        "swing": -1.48
+      },
+      "geometry": { "type": "Point", "coordinates": [146.6301215, -43.245191] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Lyons",
+        "candidate": "Brian Mitchell",
+        "state": "TAS",
+        "party": "ALP",
+        "margin_votes": 7418,
+        "margin": 10.36,
+        "marginality": "Safe",
+        "swing": -1.35
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [147.066032629017656, -42.090468169634143]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Aston",
+        "candidate": "Alan Tudge",
+        "state": "VIC",
+        "party": "LP",
+        "margin_votes": 20270,
+        "margin": 20.26,
+        "marginality": "Very Safe",
+        "swing": 2.72
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [145.258646476242518, -37.888963415619628]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Ballarat",
+        "candidate": "Catherine King",
+        "state": "VIC",
+        "party": "ALP",
+        "margin_votes": 22547,
+        "margin": 21.96,
+        "marginality": "Very Safe",
+        "swing": -3.62
+      },
+      "geometry": { "type": "Point", "coordinates": [144.075725, -37.5059535] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Bendigo",
+        "candidate": "Lisa Chesters",
+        "state": "VIC",
+        "party": "ALP",
+        "margin_votes": 18371,
+        "margin": 18.08,
+        "marginality": "Very Safe",
+        "swing": -5.17
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [144.342100500000015, -36.922032]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Bruce",
+        "candidate": "Julian Hill",
+        "state": "VIC",
+        "party": "ALP",
+        "margin_votes": 26338,
+        "margin": 28.3,
+        "marginality": "Very Safe",
+        "swing": -0.1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [145.23487458863363, -37.976627617830609]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Calwell",
+        "candidate": "Maria Vamvakinou",
+        "state": "VIC",
+        "party": "ALP",
+        "margin_votes": 32876,
+        "margin": 37.6,
+        "marginality": "Very Safe",
+        "swing": 0.93
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [144.89252841148928, -37.613526683480814]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Casey",
+        "candidate": "Tony Smith",
+        "state": "VIC",
+        "party": "LP",
+        "margin_votes": 9274,
+        "margin": 9.28,
+        "marginality": "Fairly Safe",
+        "swing": 0.1
+      },
+      "geometry": { "type": "Point", "coordinates": [145.506635, -37.750059] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Chisholm",
+        "candidate": "Gladys Liu",
+        "state": "VIC",
+        "party": "LP",
+        "margin_votes": 1090,
+        "margin": 1.14,
+        "marginality": "Marginal",
+        "swing": -2.34
+      },
+      "geometry": { "type": "Point", "coordinates": [145.1395475, -37.8441705] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Cooper",
+        "candidate": "Ged Kearney",
+        "state": "VIC",
+        "party": "ALP",
+        "margin_votes": 51323,
+        "margin": 52.64,
+        "marginality": "Very Safe",
+        "swing": -4.23
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [145.012904526875133, -37.737567031290666]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Corangamite",
+        "candidate": "Libby Coker",
+        "state": "VIC",
+        "party": "ALP",
+        "margin_votes": 2170,
+        "margin": 2.14,
+        "marginality": "Marginal",
+        "swing": -1.04
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [143.916375398314472, -38.323205337425833]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Corio",
+        "candidate": "Richard Marles",
+        "state": "VIC",
+        "party": "ALP",
+        "margin_votes": 20392,
+        "margin": 20.64,
+        "marginality": "Very Safe",
+        "swing": -2.12
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [144.36602304191112, -37.985021626366951]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Deakin",
+        "candidate": "Michael Sukkar",
+        "state": "VIC",
+        "party": "LP",
+        "margin_votes": 9307,
+        "margin": 9.56,
+        "marginality": "Fairly Safe",
+        "swing": -1.66
+      },
+      "geometry": { "type": "Point", "coordinates": [145.243788, -37.813526] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Dunkley",
+        "candidate": "Peta Murphy",
+        "state": "VIC",
+        "party": "ALP",
+        "margin_votes": 5304,
+        "margin": 5.48,
+        "marginality": "Marginal",
+        "swing": -1.71
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [145.161501418825367, -38.143798980423767]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Flinders",
+        "candidate": "Greg Hunt",
+        "state": "VIC",
+        "party": "LP",
+        "margin_votes": 10934,
+        "margin": 11.28,
+        "marginality": "Safe",
+        "swing": -1.37
+      },
+      "geometry": { "type": "Point", "coordinates": [145.0774155, -38.340471] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Fraser",
+        "candidate": "Daniel Mulino",
+        "state": "VIC",
+        "party": "ALP",
+        "margin_votes": 26247,
+        "margin": 28.36,
+        "marginality": "Very Safe",
+        "swing": 5.61
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [144.805176500000016, -37.7620685]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Gellibrand",
+        "candidate": "Tim Watts",
+        "state": "VIC",
+        "party": "ALP",
+        "margin_votes": 29225,
+        "margin": 29.66,
+        "marginality": "Very Safe",
+        "swing": 0.29
+      },
+      "geometry": { "type": "Point", "coordinates": [144.790271, -37.867871] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Gippsland",
+        "candidate": "Darren Chester",
+        "state": "VIC",
+        "party": "NP",
+        "margin_votes": 32234,
+        "margin": 33.34,
+        "marginality": "Very Safe",
+        "swing": -1.54
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [147.844353749999982, -37.15704325]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Goldstein",
+        "candidate": "Tim Wilson",
+        "state": "VIC",
+        "party": "LP",
+        "margin_votes": 15480,
+        "margin": 15.58,
+        "marginality": "Safe",
+        "swing": -4.89
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [145.019324499999982, -37.9398605]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Gorton",
+        "candidate": "Brendan O'connor",
+        "state": "VIC",
+        "party": "ALP",
+        "margin_votes": 29081,
+        "margin": 30.72,
+        "marginality": "Very Safe",
+        "swing": 3.13
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [144.628561499999989, -37.682217]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Higgins",
+        "candidate": "Katie Allen",
+        "state": "VIC",
+        "party": "LP",
+        "margin_votes": 7800,
+        "margin": 7.76,
+        "marginality": "Fairly Safe",
+        "swing": -6.09
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [145.04966836275571, -37.866207566162231]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Holt",
+        "candidate": "Anthony Byrne",
+        "state": "VIC",
+        "party": "ALP",
+        "margin_votes": 16467,
+        "margin": 17.4,
+        "marginality": "Safe",
+        "swing": 1.24
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [145.30239120423235, -38.148191598994615]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Hotham",
+        "candidate": "Clare O'neil",
+        "state": "VIC",
+        "party": "ALP",
+        "margin_votes": 11326,
+        "margin": 11.82,
+        "marginality": "Safe",
+        "swing": -1.7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [145.131863182384706, -37.920353951405986]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Indi",
+        "candidate": "Helen Haines",
+        "state": "VIC",
+        "party": "LP",
+        "margin_votes": 25708,
+        "margin": 25.46,
+        "marginality": "Very Safe",
+        "swing": 7.72
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [146.013176499999986, -36.7789875]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Isaacs",
+        "candidate": "Mark Dreyfus",
+        "state": "VIC",
+        "party": "ALP",
+        "margin_votes": 12453,
+        "margin": 12.86,
+        "marginality": "Safe",
+        "swing": -3.45
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [145.149503476144872, -38.01507960055892]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Jagajaga",
+        "candidate": "Kate Thwaites",
+        "state": "VIC",
+        "party": "ALP",
+        "margin_votes": 12841,
+        "margin": 13.14,
+        "marginality": "Safe",
+        "swing": -0.97
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [145.110297499276157, -37.706242148127657]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Kooyong",
+        "candidate": "Josh Frydenberg",
+        "state": "VIC",
+        "party": "LP",
+        "margin_votes": 13225,
+        "margin": 13.36,
+        "marginality": "Safe",
+        "swing": -6.14
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [145.064732205887225, -37.812665675417435]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "La Trobe",
+        "candidate": "Jason Wood",
+        "state": "VIC",
+        "party": "LP",
+        "margin_votes": 8863,
+        "margin": 8.98,
+        "marginality": "Fairly Safe",
+        "swing": 1.27
+      },
+      "geometry": { "type": "Point", "coordinates": [145.4562415, -38.0104395] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Lalor",
+        "candidate": "Joanne Ryan",
+        "state": "VIC",
+        "party": "ALP",
+        "margin_votes": 23204,
+        "margin": 24.82,
+        "marginality": "Very Safe",
+        "swing": 1.78
+      },
+      "geometry": { "type": "Point", "coordinates": [144.606612, -37.892797] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Macnamara",
+        "candidate": "Josh Burns",
+        "state": "VIC",
+        "party": "ALP",
+        "margin_votes": 12134,
+        "margin": 12.5,
+        "marginality": "Safe",
+        "swing": -5.04
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [144.972881765006292, -37.85223097472128]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Mallee",
+        "candidate": "Anne Webster",
+        "state": "VIC",
+        "party": "NP",
+        "margin_votes": 30459,
+        "margin": 32.46,
+        "marginality": "Very Safe",
+        "swing": -3.57
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [142.38009724459971, -35.843498773939828]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Maribyrnong",
+        "candidate": "Bill Shorten",
+        "state": "VIC",
+        "party": "ALP",
+        "margin_votes": 22610,
+        "margin": 22.4,
+        "marginality": "Very Safe",
+        "swing": -0.8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [144.890094791642696, -37.754734770257791]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Melbourne",
+        "candidate": "Adam Bandt",
+        "state": "VIC",
+        "party": "ALP",
+        "margin_votes": 31756,
+        "margin": 34.12,
+        "marginality": "Very Safe",
+        "swing": -0.06
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [144.966908499999988, -37.804008]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Menzies",
+        "candidate": "Kevin Andrews",
+        "state": "VIC",
+        "party": "LP",
+        "margin_votes": 14810,
+        "margin": 15.06,
+        "marginality": "Safe",
+        "swing": -0.28
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [145.195204708646656, -37.740306043536421]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Monash",
+        "candidate": "Russell Broadbent",
+        "state": "VIC",
+        "party": "LP",
+        "margin_votes": 14781,
+        "margin": 14.72,
+        "marginality": "Safe",
+        "swing": -0.15
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [145.851715500000012, -38.358324]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Nicholls",
+        "candidate": "Damian Drum",
+        "state": "VIC",
+        "party": "NP",
+        "margin_votes": 38172,
+        "margin": 40.06,
+        "marginality": "Very Safe",
+        "swing": -2.49
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [145.162305983609912, -36.423393533037697]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Scullin",
+        "candidate": "Andrew Giles",
+        "state": "VIC",
+        "party": "ALP",
+        "margin_votes": 39765,
+        "margin": 43.32,
+        "marginality": "Very Safe",
+        "swing": -2.08
+      },
+      "geometry": { "type": "Point", "coordinates": [145.034929, -37.6494735] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Wannon",
+        "candidate": "Dan Tehan",
+        "state": "VIC",
+        "party": "LP",
+        "margin_votes": 21577,
+        "margin": 20.76,
+        "marginality": "Very Safe",
+        "swing": 1.23
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [142.485881975506743, -37.795524639174253]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Wills",
+        "candidate": "Peter Khalil",
+        "state": "VIC",
+        "party": "ALP",
+        "margin_votes": 49686,
+        "margin": 51.7,
+        "marginality": "Very Safe",
+        "swing": -4.18
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [144.948903699589323, -37.730631534313233]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Banks",
+        "candidate": "David Coleman",
+        "state": "NSW",
+        "party": "LP",
+        "margin_votes": 11488,
+        "margin": 12.52,
+        "marginality": "Safe",
+        "swing": 4.82
+      },
+      "geometry": { "type": "Point", "coordinates": [151.055067, -33.967791] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Barton",
+        "candidate": "Linda Burney",
+        "state": "NSW",
+        "party": "ALP",
+        "margin_votes": 16929,
+        "margin": 18.82,
+        "marginality": "Very Safe",
+        "swing": -1.11
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [151.12745070255562, -33.940865650150926]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Bennelong",
+        "candidate": "John Alexander",
+        "state": "NSW",
+        "party": "LP",
+        "margin_votes": 13313,
+        "margin": 13.82,
+        "marginality": "Safe",
+        "swing": -2.81
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [151.098582744767896, -33.79453703326709]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Berowra",
+        "candidate": "Julian Leeser",
+        "state": "NSW",
+        "party": "LP",
+        "margin_votes": 29403,
+        "margin": 31.3,
+        "marginality": "Very Safe",
+        "swing": -0.8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [151.047160950970067, -33.569159632640336]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Blaxland",
+        "candidate": "Jason Clare",
+        "state": "NSW",
+        "party": "ALP",
+        "margin_votes": 23790,
+        "margin": 29.44,
+        "marginality": "Very Safe",
+        "swing": 4.76
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [151.008954983514087, -33.896382058069484]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Bradfield",
+        "candidate": "Paul Fletcher",
+        "state": "NSW",
+        "party": "LP",
+        "margin_votes": 31851,
+        "margin": 33.12,
+        "marginality": "Very Safe",
+        "swing": -4.48
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [151.150523588826871, -33.734792273948678]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Calare",
+        "candidate": "Andrew Gee",
+        "state": "NSW",
+        "party": "NP",
+        "margin_votes": 27724,
+        "margin": 26.58,
+        "marginality": "Very Safe",
+        "swing": 1.48
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [149.477699053654987, -33.087297292846827]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Chifley",
+        "candidate": "Ed Husic",
+        "state": "NSW",
+        "party": "ALP",
+        "margin_votes": 22516,
+        "margin": 24.74,
+        "marginality": "Very Safe",
+        "swing": 6.82
+      },
+      "geometry": { "type": "Point", "coordinates": [150.8329845, -33.7245905] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Cook",
+        "candidate": "Scott Morrison",
+        "state": "NSW",
+        "party": "LP",
+        "margin_votes": 35765,
+        "margin": 38.04,
+        "marginality": "Very Safe",
+        "swing": 3.63
+      },
+      "geometry": { "type": "Point", "coordinates": [151.133582, -34.02106] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Cowper",
+        "candidate": "Pat Conaghan",
+        "state": "NSW",
+        "party": "NP",
+        "margin_votes": 25076,
+        "margin": 23.76,
+        "marginality": "Very Safe",
+        "swing": -0.7
+      },
+      "geometry": { "type": "Point", "coordinates": [152.7121985, -30.836878] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Cunningham",
+        "candidate": "Sharon Bird",
+        "state": "NSW",
+        "party": "ALP",
+        "margin_votes": 26995,
+        "margin": 26.82,
+        "marginality": "Very Safe",
+        "swing": -0.09
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [150.86792758249544, -34.321001491425818]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Dobell",
+        "candidate": "Emma Mcbride",
+        "state": "NSW",
+        "party": "ALP",
+        "margin_votes": 3035,
+        "margin": 3.0,
+        "marginality": "Marginal",
+        "swing": 3.31
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [151.36911956873368, -33.247471146587166]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Farrer",
+        "candidate": "Sussan Ley",
+        "state": "NSW",
+        "party": "LP",
+        "margin_votes": 38567,
+        "margin": 39.66,
+        "marginality": "Very Safe",
+        "swing": -0.7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [144.44964250000001, -34.400587]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Fowler",
+        "candidate": "Chris Hayes",
+        "state": "NSW",
+        "party": "ALP",
+        "margin_votes": 23416,
+        "margin": 27.98,
+        "marginality": "Very Safe",
+        "swing": 3.5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [150.91449750000001, -33.895109]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Gilmore",
+        "candidate": "Fiona Phillips",
+        "state": "NSW",
+        "party": "ALP",
+        "margin_votes": 5627,
+        "margin": 5.22,
+        "marginality": "Marginal",
+        "swing": -3.34
+      },
+      "geometry": { "type": "Point", "coordinates": [150.339934, -35.332919] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Grayndler",
+        "candidate": "Anthony Albanese",
+        "state": "NSW",
+        "party": "ALP",
+        "margin_votes": 45664,
+        "margin": 47.66,
+        "marginality": "Very Safe",
+        "swing": -1.47
+      },
+      "geometry": { "type": "Point", "coordinates": [151.1578795, -33.8845905] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Greenway",
+        "candidate": "Michelle Rowland",
+        "state": "NSW",
+        "party": "ALP",
+        "margin_votes": 5343,
+        "margin": 5.6,
+        "marginality": "Marginal",
+        "swing": 3.51
+      },
+      "geometry": { "type": "Point", "coordinates": [150.908961, -33.7289455] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Hughes",
+        "candidate": "Craig Kelly",
+        "state": "NSW",
+        "party": "LP",
+        "margin_votes": 18807,
+        "margin": 19.7,
+        "marginality": "Very Safe",
+        "swing": 0.52
+      },
+      "geometry": { "type": "Point", "coordinates": [151.00883, -34.049611] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Hume",
+        "candidate": "Angus Taylor",
+        "state": "NSW",
+        "party": "LP",
+        "margin_votes": 26612,
+        "margin": 25.98,
+        "marginality": "Very Safe",
+        "swing": 2.81
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [149.725847499999986, -34.5490335]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Hunter",
+        "candidate": "Joel Fitzgibbon",
+        "state": "NSW",
+        "party": "ALP",
+        "margin_votes": 6074,
+        "margin": 5.96,
+        "marginality": "Marginal",
+        "swing": 9.48
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [150.924834039334655, -32.656835516964513]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Kingsford Smith",
+        "candidate": "Matt Thistlethwaite",
+        "state": "NSW",
+        "party": "ALP",
+        "margin_votes": 16626,
+        "margin": 17.62,
+        "marginality": "Safe",
+        "swing": -0.24
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [151.206124499999987, -33.9588175]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Lindsay",
+        "candidate": "Melissa Mcintosh",
+        "state": "NSW",
+        "party": "LP",
+        "margin_votes": 9825,
+        "margin": 10.08,
+        "marginality": "Safe",
+        "swing": 6.15
+      },
+      "geometry": { "type": "Point", "coordinates": [150.700218, -33.763552] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Lyne",
+        "candidate": "David Gillespie",
+        "state": "NSW",
+        "party": "NP",
+        "margin_votes": 30704,
+        "margin": 30.34,
+        "marginality": "Very Safe",
+        "swing": 3.54
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [152.096964960281383, -31.960608482525227]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Macarthur",
+        "candidate": "Mike Freelander",
+        "state": "NSW",
+        "party": "ALP",
+        "margin_votes": 16716,
+        "margin": 16.8,
+        "marginality": "Safe",
+        "swing": -0.07
+      },
+      "geometry": { "type": "Point", "coordinates": [150.8317625, -34.0805775] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Mackellar",
+        "candidate": "Jason Falinski",
+        "state": "NSW",
+        "party": "LP",
+        "margin_votes": 25986,
+        "margin": 26.44,
+        "marginality": "Very Safe",
+        "swing": -2.52
+      },
+      "geometry": { "type": "Point", "coordinates": [151.251888, -33.6724955] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Macquarie",
+        "candidate": "Susan Templeman",
+        "state": "NSW",
+        "party": "ALP",
+        "margin_votes": 371,
+        "margin": 0.38,
+        "marginality": "Marginal",
+        "swing": 2.0
+      },
+      "geometry": { "type": "Point", "coordinates": [150.649725, -33.479758] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Mitchell",
+        "candidate": "Alex Hawke",
+        "state": "NSW",
+        "party": "LP",
+        "margin_votes": 36760,
+        "margin": 37.26,
+        "marginality": "Very Safe",
+        "swing": 0.81
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [150.959174862925636, -33.711097960112724]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "New England",
+        "candidate": "Barnaby Joyce",
+        "state": "NSW",
+        "party": "NP",
+        "margin_votes": 34316,
+        "margin": 35.26,
+        "marginality": "Very Safe",
+        "swing": 1.21
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [151.282305630314909, -30.453268098857965]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Newcastle",
+        "candidate": "Sharon Claydon",
+        "state": "NSW",
+        "party": "ALP",
+        "margin_votes": 28501,
+        "margin": 27.66,
+        "marginality": "Very Safe",
+        "swing": 0.01
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [151.708913669234335, -32.891803179951161]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "North Sydney",
+        "candidate": "Trent Zimmerman",
+        "state": "NSW",
+        "party": "LP",
+        "margin_votes": 17960,
+        "margin": 18.54,
+        "marginality": "Very Safe",
+        "swing": -4.34
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [151.184647014559175, -33.820587396439258]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Page",
+        "candidate": "Kevin Hogan",
+        "state": "NSW",
+        "party": "NP",
+        "margin_votes": 20439,
+        "margin": 18.9,
+        "marginality": "Very Safe",
+        "swing": 7.15
+      },
+      "geometry": { "type": "Point", "coordinates": [152.856387, -29.730809] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Parkes",
+        "candidate": "Mark Coulton",
+        "state": "NSW",
+        "party": "NP",
+        "margin_votes": 31766,
+        "margin": 33.82,
+        "marginality": "Very Safe",
+        "swing": 1.81
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [145.575229864639141, -30.926151958088482]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Parramatta",
+        "candidate": "Julie Owens",
+        "state": "NSW",
+        "party": "ALP",
+        "margin_votes": 5934,
+        "margin": 7.0,
+        "marginality": "Fairly Safe",
+        "swing": 4.17
+      },
+      "geometry": { "type": "Point", "coordinates": [151.007003, -33.8100855] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Paterson",
+        "candidate": "Meryl Swanson",
+        "state": "NSW",
+        "party": "ALP",
+        "margin_votes": 10877,
+        "margin": 10.08,
+        "marginality": "Safe",
+        "swing": 5.7
+      },
+      "geometry": { "type": "Point", "coordinates": [151.518717, -32.758691] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Reid",
+        "candidate": "Fiona Martin",
+        "state": "NSW",
+        "party": "LP",
+        "margin_votes": 5960,
+        "margin": 6.36,
+        "marginality": "Fairly Safe",
+        "swing": -1.51
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [151.092774053083076, -33.854763982742114]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Richmond",
+        "candidate": "Justine Elliot",
+        "state": "NSW",
+        "party": "ALP",
+        "margin_votes": 8182,
+        "margin": 8.16,
+        "marginality": "Fairly Safe",
+        "swing": -0.12
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [153.411500799615624, -28.478302525943992]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Riverina",
+        "candidate": "Michael Mccormack",
+        "state": "NSW",
+        "party": "NP",
+        "margin_votes": 39331,
+        "margin": 38.96,
+        "marginality": "Very Safe",
+        "swing": 3.04
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [147.654873843347445, -34.164769989298335]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Robertson",
+        "candidate": "Lucy Wicks",
+        "state": "NSW",
+        "party": "LP",
+        "margin_votes": 8139,
+        "margin": 8.48,
+        "marginality": "Fairly Safe",
+        "swing": 3.1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [151.212924427591872, -33.382282659614276]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Shortland",
+        "candidate": "Pat Conroy",
+        "state": "NSW",
+        "party": "ALP",
+        "margin_votes": 8894,
+        "margin": 8.9,
+        "marginality": "Fairly Safe",
+        "swing": 5.49
+      },
+      "geometry": { "type": "Point", "coordinates": [151.622755, -33.132137] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Sydney",
+        "candidate": "Tanya Plibersek",
+        "state": "NSW",
+        "party": "ALP",
+        "margin_votes": 35405,
+        "margin": 37.34,
+        "marginality": "Very Safe",
+        "swing": -3.36
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [151.200361895255242, -33.885841901215265]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Warringah",
+        "candidate": "Zali Steggall",
+        "state": "NSW",
+        "party": "LP",
+        "margin_votes": 3899,
+        "margin": 4.24,
+        "marginality": "Marginal",
+        "swing": -8.97
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [151.256282257223802, -33.798228530522984]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Watson",
+        "candidate": "Tony Burke",
+        "state": "NSW",
+        "party": "ALP",
+        "margin_votes": 22786,
+        "margin": 27.04,
+        "marginality": "Very Safe",
+        "swing": 4.06
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [151.074512676263112, -33.907960767991909]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Wentworth",
+        "candidate": "Dave Sharma",
+        "state": "NSW",
+        "party": "LP",
+        "margin_votes": 17678,
+        "margin": 19.7,
+        "marginality": "Very Safe",
+        "swing": -7.9
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [151.25285150000002, -33.8770225]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Werriwa",
+        "candidate": "Anne Stanley",
+        "state": "NSW",
+        "party": "ALP",
+        "margin_votes": 10311,
+        "margin": 10.94,
+        "marginality": "Safe",
+        "swing": 2.73
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [150.824397874173229, -33.928509308082475]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Whitlam",
+        "candidate": "Stephen Jones",
+        "state": "NSW",
+        "party": "ALP",
+        "margin_votes": 22411,
+        "margin": 21.82,
+        "marginality": "Very Safe",
+        "swing": 39.09
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [150.581829640119423, -34.522517308438438]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Brand",
+        "candidate": "Madeleine King",
+        "state": "WA",
+        "party": "ALP",
+        "margin_votes": 11825,
+        "margin": 13.32,
+        "marginality": "Safe",
+        "swing": 4.77
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.805737936763876, -32.310611575538402]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Canning",
+        "candidate": "Andrew Hastie",
+        "state": "WA",
+        "party": "LP",
+        "margin_votes": 21002,
+        "margin": 23.1,
+        "marginality": "Very Safe",
+        "swing": 4.76
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [116.11434944189763, -32.623701242370785]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Cowan",
+        "candidate": "Anne Aly",
+        "state": "WA",
+        "party": "ALP",
+        "margin_votes": 1417,
+        "margin": 1.66,
+        "marginality": "Marginal",
+        "swing": -0.15
+      },
+      "geometry": { "type": "Point", "coordinates": [115.8637965, -31.7980865] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Curtin",
+        "candidate": "Celia Hammond",
+        "state": "WA",
+        "party": "LP",
+        "margin_votes": 25530,
+        "margin": 28.66,
+        "marginality": "Very Safe",
+        "swing": -6.37
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.790063204087531, -31.954239243592998]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Durack",
+        "candidate": "Melissa Price",
+        "state": "WA",
+        "party": "LP",
+        "margin_votes": 22943,
+        "margin": 29.52,
+        "marginality": "Very Safe",
+        "swing": 3.7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [119.593328875, -23.869076625]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Forrest",
+        "candidate": "Nola Marino",
+        "state": "WA",
+        "party": "LP",
+        "margin_votes": 26348,
+        "margin": 29.12,
+        "marginality": "Very Safe",
+        "swing": 2.0
+      },
+      "geometry": { "type": "Point", "coordinates": [115.6072095, -33.8528495] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Fremantle",
+        "candidate": "Josh Wilson",
+        "state": "WA",
+        "party": "ALP",
+        "margin_votes": 12601,
+        "margin": 13.84,
+        "marginality": "Safe",
+        "swing": 0.6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.819117155797585, -32.115840123344469]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Hasluck",
+        "candidate": "Ken Wyatt",
+        "state": "WA",
+        "party": "LP",
+        "margin_votes": 9074,
+        "margin": 10.78,
+        "marginality": "Safe",
+        "swing": 3.34
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [116.196694677608534, -31.876309646794898]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Moore",
+        "candidate": "Ian Goodenough",
+        "state": "WA",
+        "party": "LP",
+        "margin_votes": 20691,
+        "margin": 23.3,
+        "marginality": "Very Safe",
+        "swing": 0.63
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.762608728088765, -31.778597561596808]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Burt",
+        "candidate": "Matt Keogh",
+        "state": "WA",
+        "party": "ALP",
+        "margin_votes": 8788,
+        "margin": 9.98,
+        "marginality": "Fairly Safe",
+        "swing": 2.12
+      },
+      "geometry": { "type": "Point", "coordinates": [115.9629745, -32.1081625] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Pearce",
+        "candidate": "Christian Porter",
+        "state": "WA",
+        "party": "LP",
+        "margin_votes": 15033,
+        "margin": 15.04,
+        "marginality": "Safe",
+        "swing": 3.89
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.62919925, -31.25820825]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Perth",
+        "candidate": "Patrick Gorman",
+        "state": "WA",
+        "party": "ALP",
+        "margin_votes": 8646,
+        "margin": 9.86,
+        "marginality": "Fairly Safe",
+        "swing": -1.6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.890787440008651, -31.920669014561529]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Stirling",
+        "candidate": "Vince Connelly",
+        "state": "WA",
+        "party": "LP",
+        "margin_votes": 9799,
+        "margin": 11.3,
+        "marginality": "Safe",
+        "swing": -0.47
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.823305967269448, -31.875282629672203]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Swan",
+        "candidate": "Steve Irons",
+        "state": "WA",
+        "party": "LP",
+        "margin_votes": 4529,
+        "margin": 5.38,
+        "marginality": "Marginal",
+        "swing": -0.9
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.92982068823585, -31.974876212725263]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "electorate": "Tangney",
+        "candidate": "Ben Morton",
+        "state": "WA",
+        "party": "LP",
+        "margin_votes": 19131,
+        "margin": 22.94,
+        "marginality": "Very Safe",
+        "swing": 0.4
+      },
+      "geometry": { "type": "Point", "coordinates": [115.824103, -32.039376] }
+    }
+  ]
 }
