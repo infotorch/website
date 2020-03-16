@@ -5,7 +5,7 @@ agent:
     type: e1-standard-2
     os_image: ubuntu1804
 blocks:
-  - name: "Build and Push Docker Images"
+  - name: Build and Push Docker Images
     task:
       env_vars:
         - name: AWS_DEFAULT_REGION
@@ -14,6 +14,7 @@ blocks:
           value: 765386407209.dkr.ecr.ap-southeast-2.amazonaws.com/infotorch/website
       secrets:
         - name: AWS
+        - name: web-production
       prologue:
         commands:
           - checkout
@@ -23,5 +24,5 @@ blocks:
           commands:
             - checkout
             - docker build -t website .
-            - docker tag website ${ECR_REGISTRY_WEBSITE}
-            - docker push ${ECR_REGISTRY_WEBSITE}
+            - 'docker tag website ${ECR_REGISTRY_WEBSITE}'
+            - 'docker push ${ECR_REGISTRY_WEBSITE}'
