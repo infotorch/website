@@ -159,10 +159,14 @@ const defaultTheme = createMuiTheme({
   //   type: defaultDark ? "dark" : "light",
   // },
 
+  // palette: {
+
+  // }
+
   palette: {
     primary: {
       light: "#63ccff",
-      main: "#009be5",
+      main: "#006db3",
       dark: "#006db3",
     },
   },
@@ -200,11 +204,11 @@ const defaultTheme = createMuiTheme({
 const theme = {
   ...defaultTheme,
   overrides: {
-    MuiDrawer: {
-      paper: {
-        backgroundColor: "#18202c",
-      },
-    },
+    // MuiDrawer: {
+    //   paper: {
+    //     backgroundColor: "#18202c",
+    //   },
+    // },
     MuiButton: {
       label: {
         textTransform: "none",
@@ -216,29 +220,29 @@ const theme = {
         },
       },
     },
-    MuiTabs: {
-      root: {
-        marginLeft: defaultTheme.spacing(1),
-      },
-      indicator: {
-        height: 3,
-        borderTopLeftRadius: 3,
-        borderTopRightRadius: 3,
-        backgroundColor: defaultTheme.palette.common.white,
-      },
-    },
-    MuiTab: {
-      root: {
-        textTransform: "none",
-        margin: "0 16px",
-        minWidth: 0,
-        padding: 0,
-        [defaultTheme.breakpoints.up("md")]: {
-          padding: 0,
-          minWidth: 0,
-        },
-      },
-    },
+    // MuiTabs: {
+    //   root: {
+    //     marginLeft: defaultTheme.spacing(1),
+    //   },
+    //   indicator: {
+    //     height: 3,
+    //     borderTopLeftRadius: 3,
+    //     borderTopRightRadius: 3,
+    //     backgroundColor: defaultTheme.palette.common.white,
+    //   },
+    // },
+    // MuiTab: {
+    //   root: {
+    //     textTransform: "none",
+    //     margin: "0 16px",
+    //     minWidth: 0,
+    //     padding: 0,
+    //     [defaultTheme.breakpoints.up("md")]: {
+    //       padding: 0,
+    //       minWidth: 0,
+    //     },
+    //   },
+    // },
     MuiIconButton: {
       root: {
         padding: defaultTheme.spacing(1),

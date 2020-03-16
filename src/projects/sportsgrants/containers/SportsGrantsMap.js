@@ -8,9 +8,9 @@ import ReactMapGL, {
   Popup,
 } from "react-map-gl"
 import "mapbox-gl/dist/mapbox-gl.css"
-import electorateLabels from "../../data/electorate_labels.json"
-import grantsPlots from "./../../data/grants_plots.json"
-import MapPins from "../../components/MapPin"
+import electorateLabels from "../data/electorate_labels.json"
+import grantsPlots from "../data/grants_plots.json"
+import MapPins from "../components/MapPin"
 
 const defaultViewport = {
   width: "100%",
@@ -153,11 +153,11 @@ const GrantInfo = ({ feature: { properties, geometry }, onClick }) => (
     sortByDepth
     onClose={onClick}
   >
-    <div class="w240 px12 py12 txt-s" style={grantInfoStyle}>
-      <p class="txt-h3">
+    <div className="w240 px12 py12 txt-s" style={grantInfoStyle}>
+      <p className="txt-h3">
         <b>{properties.club}</b>
       </p>
-      <hr class="txt-hr"></hr>
+      <hr className="txt-hr"></hr>
       <div>
         {properties.address
           .split(",")
@@ -191,13 +191,13 @@ const mapOverlayStyle = {
 
 const MapOverlay = ({ electorate }) => (
   <div
-    class="w240 round shadow-darken10 px12 py12 txt-s"
+    className="w240 round shadow-darken10 px12 py12 txt-s"
     style={mapOverlayStyle}
   >
-    <p class="txt-h4">
+    <p className="txt-h4">
       <b>Electorate</b>
     </p>
-    <hr class="txt-hr"></hr>
+    <hr className="txt-hr"></hr>
 
     {!electorate && (
       <p>
@@ -206,23 +206,23 @@ const MapOverlay = ({ electorate }) => (
     )}
     {electorate && (
       <div>
-        <p class="txt-h4">{electorate.electorate}</p>
+        <p className="txt-h4">{electorate.electorate}</p>
         <p>{electorate.candidate}</p>
         <p style={{ marginTop: "10px" }}>
           {electorate.marginalit} {electorate.party} seat margin of{" "}
           {electorate.margin}%
         </p>
-        <div class="grid grid--gut12" style={{ marginTop: "10px" }}>
-          <div class="col col--8">
+        <div className="grid grid--gut12" style={{ marginTop: "10px" }}>
+          <div className="col col--8">
             <p>Number of grants</p>
           </div>
-          <div class="col col--4">
+          <div className="col col--4">
             <p>{electorate.grants}</p>
           </div>
-          <div class="col col--8">
+          <div className="col col--8">
             <p>Total grant funding</p>
           </div>
-          <div class="col col--4">
+          <div className="col col--4">
             <p>{numeral(electorate.amount).format("$0,0")}</p>
           </div>
         </div>
@@ -244,19 +244,19 @@ const mapLegendStyle = {
 
 const MapLegend = () => (
   <div
-    class="w240 round shadow-darken10 px12 py12 txt-s"
+    className="w240 round shadow-darken10 px12 py12 txt-s"
     style={mapLegendStyle}
   >
     {parties
       .filter(p => p.legend)
       .map((party, i) => (
-        <div id={i}>
-          <strong class="block mb6">{party.name}</strong>
-          <div class="grid mb6">
+        <div key={i}>
+          <strong className="block mb6">{party.name}</strong>
+          <div className="grid mb6">
             {marginalities.map((marginality, k) => (
               <div
                 key={i + "_" + k}
-                class="col h12"
+                className="col h12"
                 style={{
                   backgroundColor: chroma(party.color)
                     .brighten(marginality.color)
@@ -268,9 +268,9 @@ const MapLegend = () => (
           </div>
         </div>
       ))}
-    <div class="grid txt-xs">
+    <div className="grid txt-xs">
       {marginalities.map((margin, i) => (
-        <div key={i} class="col align-center">
+        <div key={i} className="col align-center">
           {margin.value}
         </div>
       ))}
@@ -293,7 +293,7 @@ const Map = () => {
       layers: interactiveLayers,
     })
 
-    if (states.length) {
+    if (states && states.length) {
       setHoverElectorate(states[0].properties)
     } else {
       setHoverElectorate(false)
@@ -352,6 +352,8 @@ const Map = () => {
     setInteractiveLayers(il)
     return layers
   }
+
+  console.log("REACT_APP_MAPBOX_API_KEY", process.env.REACT_APP_MAPBOX_API_KEY)
 
   return (
     <ReactMapGL

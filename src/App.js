@@ -1,135 +1,63 @@
-import React, { useState } from "react"
-import readingTime from "reading-time"
+import React, { useState, useEffect } from "react"
+import { Switch, Route, useHistory } from "react-router-dom"
 import { MuiThemeProvider, makeStyles } from "@material-ui/core/styles"
+
 import CssBaseline from "@material-ui/core/CssBaseline"
-import Snackbar from "@material-ui/core/Snackbar"
-import Hidden from "@material-ui/core/Hidden"
-import { BrowserRouter, Switch, Route } from "react-router-dom"
+import AppBar from "@material-ui/core/AppBar"
+import Toolbar from "@material-ui/core/Toolbar"
+// import Typography from "@material-ui/core/Typography"
+import Box from "@material-ui/core/Box"
+import Tooltip from "@material-ui/core/Tooltip"
+// import EmojiObjectsIcon from "@material-ui/icons/EmojiObjects"
+// import MenuIcon from "@material-ui/icons/Menu"
+import IconButton from "@material-ui/core/IconButton"
+// import Divider from "@material-ui/core/Divider"
+// import Menu from "@material-ui/core/Menu"
+// import MenuItem from "@material-ui/core/MenuItem"
 
+// import InfoIcon from "@material-ui/icons/Info"
+import GitHubIcon from "@material-ui/icons/GitHub"
+import TwitterIcon from "@material-ui/icons/Twitter"
+import EmailIcon from "@material-ui/icons/Email"
+
+import { logPageView } from "./analyticsTracker"
 import userTheme from "./theme"
-
-import Drawer from "./components/Drawer"
 import ErrorBoundary from "./components/ErrorBoundary"
 import LaunchScreen from "./components/LaunchScreen"
-import NavBar from "./components/NavBar"
-import DialogHost from "./components/DialogHost"
 import NotFoundContent from "./components/NotFound"
+import SocialProjectApp from "./projects/social"
+import SportsGrantsApp from "./projects/sportsgrants"
+import ClimateActApp from "./projects/climateact"
 
-import HomeContent from "./HomePage"
-import BlogContent from "./blog/BlogIndex"
-import BlogArchive from "./blog/Archive"
-
-import SportsGrantsMap from "./projects/sportsgrants/Map"
-import SportsGrantsData from "./projects/sportsgrants/Data"
-import SportsGrantsFigures from "./projects/sportsgrants/Figures"
-import ClimateActNow from "./projects/climateact/Data"
-
-const drawerWidth = 256
-
+import infoTorchLogo from "./images/infotorch-logo.png"
 const style = makeStyles(theme => ({
   root: {
     display: "grid",
-    gridTemplateRows: "56px auto",
-    gridTemplateColumns: `${drawerWidth}px auto`,
+    gridTemplateRows: "80px auto",
     height: "100vh",
+    alignItems: "start",
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
-    gridColumn: "1/2",
-    gridRow: "1",
-  },
-  drawer: {
-    // width: drawerWidth,
     gridColumn: "1",
-    gridRow: "2",
-    [theme.breakpoints.up("lg")]: {
-      flexShrink: 0,
-      // width: drawerWidth,
-    },
+    gridRow: "1",
+    backgroundColor: theme.dark,
+    borderBottom: `2px solid ${theme.primary}`,
+    color: "white",
   },
-  drawerPaper: {
-    width: drawerWidth,
-  },
-  content: {
-    // flexGrow: 1,
-    gridColumn: "2",
-    gridRow: "2",
-    [theme.breakpoints.down("xs")]: {
-      // flexShrink: 0,
-      gridColumn: "1/3",
-
-      // width: drawerWidth,
-    },
-    // padding: theme.spacing(3),
-  },
-  toolbar: theme.mixins.toolbar,
 }))
 
 const App = () => {
-  const [state, setState] = useState({
+  const [state] = useState({
     ready: true,
-    performingAction: false,
-    theme: userTheme,
-    user: null,
-    userData: null,
-    roles: [],
-
-    snackbar: {
-      autoHideDuration: 0,
-      message: "",
-      open: false,
-    },
   })
-
-  const [mobileOpen, setMobileOpen] = useState(false)
-
-  const handleDrawerOpen = () => {
-    setMobileOpen(true)
-  }
-
-  const handleDrawerClose = () => {
-    setMobileOpen(false)
-  }
-
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen)
-  }
-
-  const [aboutOpen, setAboutOpen] = useState(false)
-
-  const openSnackbar = (message, autoHideDuration = 2, callback) => {
-    setState(
-      {
-        snackbar: {
-          autoHideDuration: readingTime(message).time * autoHideDuration,
-          message,
-          open: true,
-        },
-        ...state,
-      },
-      () => {
-        if (callback && typeof callback === "function") {
-          callback()
-        }
-      },
-    )
-  }
-
-  const closeSnackbar = (clearMessage = false) => {
-    const { snackbar } = state
-
-    setState({
-      snackbar: {
-        message: clearMessage ? "" : snackbar.message,
-        open: false,
-      },
-      ...state,
-    })
-  }
-
+  const history = useHistory()
   const classes = style()
+  const { ready } = state
 
-  const { ready, performingAction, theme, snackbar } = state
+  useEffect(() => {
+    logPageView(history)
+  }, [history])
 
   return (
     <MuiThemeProvider theme={userTheme}>
@@ -138,94 +66,73 @@ const App = () => {
 
         <ErrorBoundary>
           {!ready && <LaunchScreen />}
-
           {ready && (
-            <BrowserRouter basename={process.env.REACT_APP_BASENAME}>
-              <NavBar
-                className={classes.appBar}
-                performingAction={performingAction}
-                theme={theme}
-                handleDrawerClose={handleDrawerClose}
-                handleDrawerOpen={handleDrawerOpen}
-                onAboutClick={() => setAboutOpen(true)}
-              />
-              <nav className={classes.drawer}>
-                <Hidden smUp implementation="js">
-                  <Drawer
-                    PaperProps={{ style: { width: drawerWidth } }}
-                    variant="temporary"
-                    open={mobileOpen}
-                    onClose={handleDrawerToggle}
-                    closeDrawer={handleDrawerClose}
-                  />
-                </Hidden>
-                <Hidden xsDown implementation="css">
-                  <Drawer
-                    PaperProps={{ style: { width: drawerWidth } }}
-                    closeDrawer={handleDrawerClose}
-                  />
-                </Hidden>
-              </nav>
+            <>
+              <AppBar className={classes.appBar}>
+                <Toolbar>
+                  <Box display="flex" flexGrow={1}>
+                    <img src={infoTorchLogo} height="50" alt="logo" />
+                  </Box>
 
-              <main className={classes.content}>
-                <Switch>
-                  <Route path="/" exact>
-                    <HomeContent openSnackbar={openSnackbar} />
-                  </Route>
+                  <IconButton
+                    color="inherit"
+                    aria-label={"Follow us on twitter"}
+                    // disabled={performingAction}
+                    target="_new"
+                    href="https://github.com/infotorch"
+                  >
+                    <GitHubIcon />
+                  </IconButton>
 
-                  <Route path="/blog" exact>
-                    <BlogContent openSnackbar={openSnackbar} />
-                  </Route>
+                  <Tooltip
+                    title={"View source code on GitHub"}
+                    enterDelay={300}
+                  >
+                    <IconButton
+                      color="inherit"
+                      aria-label={"view source code on GitHub"}
+                      // disabled={performingAction}
+                      target="_new"
+                      href="https://twitter.com/infotorchorg"
+                    >
+                      <TwitterIcon />
+                    </IconButton>
+                  </Tooltip>
 
-                  <Route path="/archive">
-                    <BlogArchive openSnackbar={openSnackbar} />
-                  </Route>
+                  <Tooltip title={"Email us"} enterDelay={300}>
+                    <IconButton
+                      color="inherit"
+                      aria-label={"email us"}
+                      href="mailto:hello@infotorch.org"
+                      // disabled={performingAction}
+                      // onClick={() => {
+                      //   closeMenu()
+                      //   onAboutClick()
+                      // }}
+                    >
+                      <EmailIcon />
+                    </IconButton>
+                  </Tooltip>
+                </Toolbar>
+              </AppBar>
 
-                  <Route path="/sportsgrants" exact>
-                    <SportsGrantsData openSnackbar={openSnackbar} />
-                  </Route>
-                  <Route path="/sportsgrants/figures" exact>
-                    <SportsGrantsFigures openSnackbar={openSnackbar} />
-                  </Route>
-                  <Route path="/sportsgrants/map" exact>
-                    <SportsGrantsMap openSnackbar={openSnackbar} />
-                  </Route>
+              <Switch>
+                <Route path="/social">
+                  <SocialProjectApp />
+                </Route>
+                <Route path="/climateact">
+                  <ClimateActApp />
+                </Route>
+                <Route path="/sportsgrants">
+                  <SportsGrantsApp />
+                </Route>
 
-                  <Route path="/climateact" exact>
-                    <ClimateActNow openSnackbar={openSnackbar} />
-                  </Route>
-
-                  <Route>
-                    <NotFoundContent />
-                  </Route>
-                </Switch>
-              </main>
-            </BrowserRouter>
+                <Route>
+                  <NotFoundContent />
+                </Route>
+              </Switch>
+            </>
           )}
-
-          <>
-            <DialogHost
-              performingAction={performingAction}
-              theme={theme}
-              openSnackbar={openSnackbar}
-              dialogs={{
-                aboutDialog: {
-                  dialogProps: {
-                    open: aboutOpen,
-
-                    onClose: () => setAboutOpen(false),
-                  },
-                },
-              }}
-            />
-
-            <Snackbar
-              autoHideDuration={snackbar.autoHideDuration}
-              message={snackbar.message}
-              open={snackbar.open}
-              onClose={closeSnackbar}
-            />
-          </>
         </ErrorBoundary>
       </div>
     </MuiThemeProvider>
