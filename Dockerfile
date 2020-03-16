@@ -9,6 +9,12 @@ RUN yarn install --prod --pure-lockfile
 # build the site
 FROM build as app
 COPY . /code
+
+ARG REACT_APP_SENTRY_DSN
+ARG REACT_APP_API_ENDPOINT
+ARG REACT_APP_ANALYTICS_ID
+ARG REACT_APP_MAPBOX_API_KEY
+
 RUN yarn run build
 
 # production environment
