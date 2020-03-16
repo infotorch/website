@@ -11,7 +11,7 @@ import App from "./App"
 initializeGA()
 
 Sentry.init({
-  dsn: "https://462cbff8b4fe46a2843abc50090bf43b@sentry.io/4698794",
+  dsn: process.env.REACT_APP_SENTRY_DSN,
   environment: process.env.NODE_ENV,
   enabled: (() =>
     ["production", "stage", "staging"].indexOf(process.env.NODE_ENV) !== -1)(),
