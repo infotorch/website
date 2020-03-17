@@ -16,7 +16,7 @@ const ProjectIntro = () => (
   <div style={styles}>
     <>
       <Typography variant="caption" gutterBottom>
-        v{pkg["version"]} - {process.env.REVISION}
+        v{pkg["version"]} - {process.env.BRANCH_NAME} - {process.env.REVISION}
       </Typography>
     </>
   </div>
