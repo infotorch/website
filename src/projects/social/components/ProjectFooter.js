@@ -1,6 +1,9 @@
 import React from "react"
 import Link from "@material-ui/core/Link"
 import Typography from "@material-ui/core/Typography"
+import pkg from "../../../../package.json"
+
+console.log(pkg)
 
 const styles = {
   // width: "100%",
@@ -12,10 +15,8 @@ const styles = {
 const ProjectIntro = () => (
   <div style={styles}>
     <>
-      <Typography variant="body2" gutterBottom>
-        Concept by{" "}
-        <Link href="https://twitter.com/simonahac">Simon Holmes à Court</Link>.
-        2020.
+      <Typography variant="caption" gutterBottom>
+        v{pkg["version"]} - {process.env.REVISION}
       </Typography>
     </>
   </div>
