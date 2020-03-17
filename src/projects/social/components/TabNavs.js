@@ -13,7 +13,7 @@ const style = makeStyles(theme => ({
 
 const TabNav = () => {
   const tabValue = useTabsWithRouter(
-    ["/social/lookup", "/social/top", "/social"],
+    ["/social/lookup", "/social/top", "/social/tweets", "/social"],
     "/social",
   )
 
@@ -29,6 +29,7 @@ const TabNav = () => {
       >
         <TabLink label="Members" value="/social" />
         <TabLink label="Top Followed" value="/social/top" />
+        <TabLink label="Top Tweets" value="/social/tweets" />
         <TabLink label="Lookup" value="/social/lookup" />
       </Tabs>
     </Paper>

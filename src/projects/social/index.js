@@ -8,6 +8,7 @@ import NotFoundContent from "../../components/NotFound"
 import MembersRanked from "./containers/SocialMembersRanked"
 import FollowingLookup from "./containers/SocialFollowingLookup"
 import TopRanked from "./containers/SocialTopRanked"
+import TopTweets from "./containers/SocialTopTweets"
 
 import ProjectInfo from "./components/ProjectIntro"
 import ProjectFooter from "./components/ProjectFooter"
@@ -52,6 +53,9 @@ const SocialApp = () => {
           </Route>
           <Route path="/social/top" exact>
             <TopRanked />
+          </Route>
+          <Route path="/social/tweets" exact>
+            <TopTweets />
           </Route>
           <Route path="/social" exact>
             <MembersRanked />
