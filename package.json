@@ -33,7 +33,8 @@
     "purgecf": "./cloudflare-purge.sh",
     "predeploy": "react-scripts build",
     "deploy": "aws s3 sync build s3://infotorch.org/ --acl public-read",
-    "postdeploy": "yarn run purgecf"
+    "postdeploy": "yarn run purgecf",
+    "postpatch": "git push --tags"
   },
   "devDependencies": {
     "eslint-config-prettier": "^6.10.0",
