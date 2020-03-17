@@ -23,6 +23,12 @@ blocks:
         - name: docker build and push website
           commands:
             - checkout
-            - docker build -t website --build-arg REACT_APP_SENTRY_DSN --build-arg REACT_APP_API_ENDPOINT --build-arg REACT_APP_ANALYTICS_ID --build-arg REACT_APP_MAPBOX_API_KEY .
+            - docker build -t website \
+              --build-arg REACT_APP_SENTRY_DSN \
+              --build-arg REACT_APP_API_ENDPOINT \
+              --build-arg REACT_APP_ANALYTICS_ID \
+              --build-arg BRANCH_NAME \
+              --build-arg REVISION \
+              --build-arg REACT_APP_MAPBOX_API_KEY .
             - "docker tag website ${ECR_REGISTRY_WEBSITE}"
             - "docker push ${ECR_REGISTRY_WEBSITE}"
