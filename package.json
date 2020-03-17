@@ -1,6 +1,6 @@
 {
   "name": "@infotorch/website",
-  "version": "0.2.6",
+  "version": "0.2.7-0",
   "private": true,
   "license": "MIT",
   "dependencies": {
