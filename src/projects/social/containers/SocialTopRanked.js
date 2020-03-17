@@ -124,7 +124,6 @@ function Grid({ ...rest }) {
         })),
       )
       .then(data => {
-        console.log(data[0])
         setRows(data)
         setLoading(false)
       })

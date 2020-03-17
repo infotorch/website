@@ -1,9 +1,6 @@
 import React from "react"
-import Link from "@material-ui/core/Link"
 import Typography from "@material-ui/core/Typography"
 import pkg from "../../../../package.json"
-
-console.log(pkg)
 
 const styles = {
   // width: "100%",

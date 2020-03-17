@@ -230,7 +230,6 @@ const FollowingLookup = () => {
     }
 
     if (username) {
-      console.log("doSearch", username)
       doSearch(username)
     }
   }, [location, username, doSearch, setValue])
