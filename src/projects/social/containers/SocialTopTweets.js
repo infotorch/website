@@ -110,9 +110,7 @@ const MemberRanked = () => {
             onChange={e => setTime(e.target.value)}
           >
             <MenuItem value={1}>Day</MenuItem>
-            <MenuItem disabled value={7}>
-              Week
-            </MenuItem>
+            <MenuItem value={7}>Week</MenuItem>
             <MenuItem disabled value={100}>
               All Time
             </MenuItem>
