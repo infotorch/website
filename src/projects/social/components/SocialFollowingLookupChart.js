@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from "react"
-import { ResponsiveBar, Bar } from "@nivo/bar"
+import { Bar } from "@nivo/bar"
 import agent from "../../../agent"
 
 const colors = {
@@ -28,10 +28,6 @@ const SocialFollowingLookupChart = ({ username }) => {
     agent.api
       .reportFollowChart(username)
       .then(r => r.data)
-      .then(r => {
-        console.log(r)
-        return r
-      })
       .then(r =>
         Object.keys(r).map(i => ({
           party: i,
@@ -55,8 +51,6 @@ const SocialFollowingLookupChart = ({ username }) => {
       doReq(username)
     }
   }, [username, doReq])
-
-  console.log(record)
 
   return record ? (
     <Bar
@@ -91,8 +85,6 @@ const SocialFollowingLookupChart = ({ username }) => {
         legendPosition: "middle",
         legendOffset: -50,
       }}
-      // labelSkipWidth={12}
-      // labelSkipHeight={12}
       labelTextColor={{ from: "color", modifiers: [["darker", 1.6]] }}
       legends={[
         {
