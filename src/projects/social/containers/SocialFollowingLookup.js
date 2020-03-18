@@ -12,6 +12,7 @@ import { useForm } from "react-hook-form"
 import Button from "@material-ui/core/Button"
 import MaterialTable from "material-table"
 import tableIcons from "../../../components/TableIcons"
+import SocialFollowingLookupChart from "../components/SocialFollowingLookupChart"
 import PaperLoadingScreen from "../../../components/PaperLoadingScreen"
 import {
   Twitter,
@@ -288,6 +289,11 @@ const FollowingLookup = () => {
                 <Typography variant="body1" gutterBottom>
                   @{username} is followed by {resultCount} members of parliament
                 </Typography>
+              </Paper>
+            )}
+            {username && (
+              <Paper className={classes.container}>
+                <SocialFollowingLookupChart username={username} />
               </Paper>
             )}
             {rows.length ? (

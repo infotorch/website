@@ -37,9 +37,9 @@ const requests = {
 const api = {
   members: () => requests.get("/api/members/"),
   reportFollow: username =>
-    requests.get(`/api/report/aph/follow/?username=${username}`, {
-      u: username,
-    }),
+    requests.get(`/api/report/aph/follow/?username=${username}`),
+  reportFollowChart: username =>
+    requests.get(`/api/report/aph/follow-chart/?username=${username}`),
   reportTop: () => requests.get("/api/report/aph/top/"),
   topTweets: (rank = "retweet", time = 1) =>
     requests.get(`/api/top/aph/?type=${rank}&time=${time}`).then(r => r.data),
