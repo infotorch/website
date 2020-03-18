@@ -25,16 +25,17 @@ const style = makeStyles(theme => ({
 
 const columnMap = [
   {
-    title: "Rank",
+    title: "",
     field: "rank",
     filtering: false,
     sortable: true,
-    width: 20,
+    width: 10,
   },
   {
     title: "Name",
     field: "twitter_profile.profile_image",
     sortable: false,
+    filtering: false,
     width: 100,
     render: rowData =>
       rowData.twitter_profile.profile_image ? (
@@ -49,12 +50,14 @@ const columnMap = [
   {
     // title: "Member Name",
     field: "name",
+    filtering: false,
     sortable: true,
     width: 230,
   },
   {
     title: "Electorate",
     field: "electorate",
+    filtering: false,
     sortable: false,
     width: 140,
   },
@@ -66,9 +69,9 @@ const columnMap = [
     width: 80,
     lookup: {
       NSW: "NSW",
-      VIC: "Victoria",
-      QLD: "Queensland",
-      TAS: "Tasmania",
+      VIC: "VIC",
+      QLD: "QLD",
+      TAS: "TAS",
       SA: "SA",
       WA: "WA",
       ACT: "ACT",
@@ -87,26 +90,22 @@ const columnMap = [
   },
   {
     title: "Party",
-    field: "party",
+    field: "party_group",
     sortable: true,
     filtering: true,
     lookup: {
       ALP: "Labor",
-      LP: "Liberal",
-      NP: "National",
+      COA: "Coalition",
       IND: "Independent",
       GRN: "Greens",
-      LNP: "LNP",
       ONP: "One Nation",
-      LMB: "Lambie Party",
-      CLP: "Country Liberal",
       CA: "Centre Alliance",
-      KAP: "Katter Australia",
     },
   },
   {
     title: "",
     field: "twitter_profile.username",
+    filtering: false,
     sortable: false,
     width: 20,
     render: rowData =>
@@ -116,17 +115,19 @@ const columnMap = [
         undefined
       ),
   },
-  {
-    title: "",
-    field: "twitter_profile.verified",
-    sortable: true,
-    width: 20,
-    render: rowData =>
-      rowData.twitter_profile.verified ? <TwitterVerified /> : undefined,
-  },
+  // {
+  //   title: "",
+  //   field: "twitter_profile.verified",
+  //   filtering: false,
+  //   sortable: true,
+  //   width: 20,
+  //   render: rowData =>
+  //     rowData.twitter_profile.verified ? <TwitterVerified /> : undefined,
+  // },
   {
     title: "Followers",
     field: "twitter_profile.follower_count",
+    filtering: false,
     sortable: true,
     type: "numeric",
     defaultSort: "desc",
@@ -135,6 +136,7 @@ const columnMap = [
   {
     title: "Following",
     field: "twitter_profile.following_count",
+    filtering: false,
     sortable: true,
     type: "numeric",
     render: data => numeral(data.twitter_profile.following_count).format("0,0"),
@@ -142,6 +144,7 @@ const columnMap = [
   {
     title: "Tweets",
     field: "twitter_profile.status_count",
+    filtering: false,
     sortable: true,
     type: "numeric",
     render: data => numeral(data.twitter_profile.status_count).format("0,0"),
@@ -177,9 +180,10 @@ const Grid = () => {
       options={{
         sortable: false,
         width: 140,
-        filtering: false,
+        filtering: true,
         pageSize: 25,
         pageSizeOptions: [25, 50, 100, 200],
+        title: "",
       }}
     />
   )

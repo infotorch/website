@@ -15,7 +15,7 @@ import tableIcons from "../../../components/TableIcons"
 import PaperLoadingScreen from "../../../components/PaperLoadingScreen"
 import {
   Twitter,
-  TwitterVerified,
+  // TwitterVerified,
   TwitterProfileImage,
 } from "../../../components/SocialIcons"
 import agent from "../../../agent"
@@ -48,7 +48,7 @@ const columnMap = [
       ),
   },
   {
-    title: "Member Name",
+    title: "Name",
     field: "member.name",
     sortable: true,
     width: 230,
@@ -69,11 +69,11 @@ const columnMap = [
     width: 80,
     lookup: {
       NSW: "NSW",
-      VIC: "Victoria",
-      QLD: "Queensland",
-      TAS: "Tasmania",
-      SA: "South Australia",
-      WA: "West Australia",
+      VIC: "VIC",
+      QLD: "QLD",
+      TAS: "TAS",
+      SA: "SA",
+      WA: "WA",
       ACT: "ACT",
       NT: "NT",
     },
@@ -90,21 +90,16 @@ const columnMap = [
   },
   {
     title: "Party",
-    field: "member.party",
+    field: "member.party_group",
     sortable: true,
     filtering: true,
     lookup: {
       ALP: "Labor",
-      LP: "Liberal",
-      NP: "National",
+      COA: "Coalition",
       IND: "Independent",
       GRN: "Greens",
-      LNP: "LNP",
       ONP: "One Nation",
-      LMB: "Lambie Party",
-      CLP: "Country Liberal",
       CA: "Centre Alliance",
-      KAP: "Katter Australia",
     },
   },
   {
@@ -116,14 +111,14 @@ const columnMap = [
     render: rowData =>
       rowData.username ? <Twitter username={rowData.username} /> : undefined,
   },
-  {
-    title: "",
-    field: "verified",
-    sortable: true,
-    filtering: false,
-    width: 20,
-    render: rowData => (rowData.verified ? <TwitterVerified /> : undefined),
-  },
+  // {
+  //   title: "",
+  //   field: "verified",
+  //   sortable: true,
+  //   filtering: false,
+  //   width: 20,
+  //   render: rowData => (rowData.verified ? <TwitterVerified /> : undefined),
+  // },
   {
     title: "Followers",
     field: "follower_count",
@@ -133,22 +128,22 @@ const columnMap = [
     defaultSort: "desc",
     render: data => numeral(data.follower_count).format("0,0"),
   },
-  {
-    title: "Following",
-    field: "following_count",
-    sortable: true,
-    type: "numeric",
-    filtering: false,
-    render: data => numeral(data.following_count).format("0,0"),
-  },
-  {
-    title: "Tweets",
-    field: "status_count",
-    sortable: true,
-    type: "numeric",
-    filtering: false,
-    render: data => numeral(data.status_count).format("0,0"),
-  },
+  // {
+  //   title: "Following",
+  //   field: "following_count",
+  //   sortable: true,
+  //   type: "numeric",
+  //   filtering: false,
+  //   render: data => numeral(data.following_count).format("0,0"),
+  // },
+  // {
+  //   title: "Tweets",
+  //   field: "status_count",
+  //   sortable: true,
+  //   type: "numeric",
+  //   filtering: false,
+  //   render: data => numeral(data.status_count).format("0,0"),
+  // },
 ]
 
 const Table = ({ rows, ...rest }) => (
@@ -157,7 +152,7 @@ const Table = ({ rows, ...rest }) => (
     icons={tableIcons}
     data={rows}
     options={{
-      filtering: false,
+      filtering: true,
       pageSize: 25,
       pageSizeOptions: [25, 50, 100, 200],
     }}
