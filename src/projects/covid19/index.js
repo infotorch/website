@@ -3,9 +3,7 @@ import { Switch, Route } from "react-router-dom"
 import { makeStyles } from "@material-ui/core/styles"
 
 import NotFoundContent from "../../components/NotFound"
-
 import CovidDashboard from "./containers/CovidDashboard"
-
 import ProjectInfo from "./components/ProjectIntro"
 
 const style = makeStyles(theme => ({
@@ -15,18 +13,9 @@ const style = makeStyles(theme => ({
   },
   nav: {
     padding: "30px 30px 0px 30px",
-    // gridColumn: "1",
-    // gridRow: "2",
   },
   content: {
-    // gridColumn: "1",
-    // gridRow: "3",
     padding: "30px",
-    // alignSelf: "stretch",
-    // justifySelf: "stretch",
-    // [theme.breakpoints.down("xs")]: {
-    //   gridColumn: "1/3",
-    // },
   },
 }))
 

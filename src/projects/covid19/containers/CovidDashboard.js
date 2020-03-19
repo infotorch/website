@@ -12,8 +12,8 @@ import TableContainer from "@material-ui/core/TableContainer"
 import TableHead from "@material-ui/core/TableHead"
 import TableRow from "@material-ui/core/TableRow"
 
-import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward"
-import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward"
+import { IoMdArrowDropupCircle } from "react-icons/io"
+import { IoMdArrowDropdownCircle } from "react-icons/io"
 
 const style = makeStyles(theme => ({
   container: {
@@ -21,8 +21,8 @@ const style = makeStyles(theme => ({
     marginBottom: "30px",
   },
   table: {
-    minWidth: 350,
-    maxWidth: 630,
+    // minWidth: 350,
+    // maxWidth: 630,
   },
   // thead: {
   //   fontWeight: "bold",
@@ -40,11 +40,11 @@ const getIncrease = (today, yesterday) => {
   return (
     <>
       {d > 0 ? (
-        <ArrowUpwardIcon style={{ color: "red" }} />
+        <IoMdArrowDropupCircle style={{ color: "firebrick" }} />
       ) : (
-        <ArrowDownwardIcon style={{ color: "green" }} />
+        <IoMdArrowDropdownCircle style={{ color: "forestgreen" }} />
       )}
-      {d}
+      {" " + d}
     </>
   )
 }
@@ -76,15 +76,12 @@ function TopStatsTable({ ...rest }) {
   }
 
   return (
-    <TableContainer container={Paper}>
+    <TableContainer>
       <Table className={classes.table} aria-label="simple table">
         <TableHead className={classes.thead}>
           <TableRow>
             <TableCell>State</TableCell>
             <TableCell colSpan="2">Cases</TableCell>
-            <TableCell colSpan="1">
-              R<sup>0</sup>
-            </TableCell>
             <TableCell colSpan="2">Deaths</TableCell>
             <TableCell colSpan="2">Tested</TableCell>
           </TableRow>
@@ -99,12 +96,13 @@ function TopStatsTable({ ...rest }) {
               <TableCell>
                 {getIncrease(row.confirmed, row.confirmed_yesterday)}{" "}
               </TableCell>
-              <TableCell></TableCell>
               <TableCell align="left">{row.deaths}</TableCell>
               <TableCell>
                 {getIncrease(row.deaths, row.deaths_yesterday)}{" "}
               </TableCell>
-              <TableCell align="left">{row.tested}</TableCell>
+              <TableCell align="left">
+                {row.tested > 0 ? numeral(row.tested).format("0,0") : ""}
+              </TableCell>
               <TableCell>
                 {/* {getIncrease(row.tested, row.tested_yesterday)}{" "} */}
               </TableCell>
