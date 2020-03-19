@@ -45,6 +45,11 @@ const api = {
     requests.get(`/api/top/aph/?type=${rank}&time=${time}`).then(r => r.data),
 }
 
+const covidAgent = {
+  statTotals: () => requests.get("/api/covid19/totals/").then(r => r.data),
+}
+
 export default {
   api,
+  covidAgent,
 }

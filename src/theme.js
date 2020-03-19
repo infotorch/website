@@ -243,6 +243,15 @@ const theme = {
     //     },
     //   },
     // },
+    MuiTableCell: {
+      head: {
+        // padding: "40px 24px 40px 16px",
+        backgroundColor: "#444",
+        fontWeight: "bold",
+        fontSize: "14pt",
+        color: "white",
+      },
+    },
     MuiIconButton: {
       root: {
         padding: defaultTheme.spacing(1),

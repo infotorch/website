@@ -28,6 +28,7 @@ import NotFoundContent from "./components/NotFound"
 import SocialProjectApp from "./projects/social"
 import SportsGrantsApp from "./projects/sportsgrants"
 import ClimateActApp from "./projects/climateact"
+import CovidProject from "./projects/covid19"
 
 import infoTorchLogo from "./images/infotorch-logo.png"
 const style = makeStyles(theme => ({
@@ -125,6 +126,9 @@ const App = () => {
                 </Route>
                 <Route path="/sportsgrants">
                   <SportsGrantsApp />
+                </Route>
+                <Route path="/covid19">
+                  <CovidProject />
                 </Route>
 
                 <Route>
