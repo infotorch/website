@@ -251,8 +251,22 @@ const theme = {
         fontSize: "14pt",
         color: "white",
       },
+
       sizeSmall: {
         width: "50px",
+      },
+    },
+    MuiTableRow: {
+      root: {
+        "&:last-child th": {
+          // backgroundColor: "#333",
+          borderTop: "1px solid black",
+          fontWeight: "bold",
+        },
+        "&:last-child td": {
+          backgroundColor: "#eee",
+          fontWeight: "bold",
+        },
       },
     },
     MuiIconButton: {

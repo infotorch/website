@@ -13,6 +13,7 @@ import TableHead from "@material-ui/core/TableHead"
 import TableRow from "@material-ui/core/TableRow"
 import Typography from "@material-ui/core/Typography"
 import Grid from "@material-ui/core/Grid"
+import formatDistanceToNow from "date-fns/formatDistanceToNow"
 
 import { IoMdArrowDropupCircle } from "react-icons/io"
 import { IoMdArrowDropdownCircle } from "react-icons/io"
@@ -81,14 +82,14 @@ function TopStatsTable({ ...rest }) {
   }
 
   return (
-    <TableContainer>
+    <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="simple table">
         <TableHead className={classes.thead}>
           <TableRow>
             <TableCell>State</TableCell>
             <TableCell colSpan="2">Cases</TableCell>
             <TableCell colSpan="2">Deaths</TableCell>
-            <TableCell colSpan="2">Tested</TableCell>
+            <TableCell colSpan="1">Updated</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -110,11 +111,13 @@ function TopStatsTable({ ...rest }) {
                 {getIncrease(row.deaths, row.deaths_yesterday)}{" "}
               </TableCell>
               <TableCell align="left">
-                {row.tested > 0 ? numeral(row.tested).format("0,0") : ""}
+                {formatDistanceToNow(Date.parse(row.date_created))} ago
+                {/* {row.tested > 0 ? numeral(row.tested).format("0,0") : ""} */}
               </TableCell>
-              <TableCell>
-                {/* {getIncrease(row.tested, row.tested_yesterday)}{" "} */}
-              </TableCell>
+              {/* <TableCell>
+                {distanceInWordsToNow(row.date_created)}
+                {/* {getIncrease(row.tested, row.tested_yesterday)}{" "}
+              </TableCell> */}
             </TableRow>
           ))}
         </TableBody>
