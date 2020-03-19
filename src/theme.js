@@ -251,6 +251,9 @@ const theme = {
         fontSize: "14pt",
         color: "white",
       },
+      sizeSmall: {
+        width: "50px",
+      },
     },
     MuiIconButton: {
       root: {

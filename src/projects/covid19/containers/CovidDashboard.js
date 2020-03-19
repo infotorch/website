@@ -11,11 +11,16 @@ import TableCell from "@material-ui/core/TableCell"
 import TableContainer from "@material-ui/core/TableContainer"
 import TableHead from "@material-ui/core/TableHead"
 import TableRow from "@material-ui/core/TableRow"
+import Typography from "@material-ui/core/Typography"
+import Grid from "@material-ui/core/Grid"
 
 import { IoMdArrowDropupCircle } from "react-icons/io"
 import { IoMdArrowDropdownCircle } from "react-icons/io"
 
 const style = makeStyles(theme => ({
+  root: {
+    flexGrow: 1,
+  },
   container: {
     padding: "30px",
     marginBottom: "30px",
@@ -92,12 +97,16 @@ function TopStatsTable({ ...rest }) {
               <TableCell component="th" scope="row">
                 {row.state_long}
               </TableCell>
-              <TableCell align="left">{row.confirmed} </TableCell>
-              <TableCell>
+              <TableCell align="left" size="small">
+                {row.confirmed}{" "}
+              </TableCell>
+              <TableCell align="left">
                 {getIncrease(row.confirmed, row.confirmed_yesterday)}{" "}
               </TableCell>
-              <TableCell align="left">{row.deaths}</TableCell>
-              <TableCell>
+              <TableCell align="left" size="small">
+                {row.deaths}
+              </TableCell>
+              <TableCell align="left">
                 {getIncrease(row.deaths, row.deaths_yesterday)}{" "}
               </TableCell>
               <TableCell align="left">
@@ -115,12 +124,21 @@ function TopStatsTable({ ...rest }) {
 }
 
 const CovidDashboard = () => {
+  const classes = style()
+
   return (
-    <>
-      <Paper xs={12} md={6}>
-        <TopStatsTable />
-      </Paper>
-    </>
+    <div className={classes.root}>
+      <Grid container spacing={3}>
+        <Grid item xs>
+          <TopStatsTable />
+        </Grid>
+        <Grid item xs>
+          <Paper>
+            <Typography>Graph</Typography>
+          </Paper>
+        </Grid>
+      </Grid>
+    </div>
   )
 }
 
