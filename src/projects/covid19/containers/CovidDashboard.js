@@ -36,7 +36,7 @@ const style = makeStyles(theme => ({
     // minHeight: "500px",
     // paddingTop: "10px",
     // paddingLeft: "10px",
-    height: "560px",
+    height: "600px",
     // padding: "10px",
   },
   // thead: {
