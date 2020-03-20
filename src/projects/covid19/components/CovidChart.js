@@ -72,7 +72,7 @@ const SocialFollowingLookupChart = ({ username }) => {
       }}
       curve={"basis"}
       // enablePointLabel={true}
-      margin={{ top: 50, right: 60, bottom: 80, left: 60 }}
+      margin={{ top: 20, right: 60, bottom: 80, left: 60 }}
       pointSize={6}
       pointBorderWidth={1}
       pointBorderColor={{
@@ -80,41 +80,16 @@ const SocialFollowingLookupChart = ({ username }) => {
         modifiers: [["darker", 0.3]],
       }}
       useMesh={true}
-      // axisTop={null}
-      // axisRight={null}
-      // axisBottom={{
-      //   tickSize: 1,
-      //   tickPadding: 5,
-      //   tickRotation: 0,
-      //   legend: "% Followed",
-      //   legendPosition: "middle",
-      //   legendOffset: 30,
-      // }}
-      // axisLeft={{
-      //   dataFrom: "indexes",
-      //   tickSize: 1,
-      //   tickPadding: 5,
-      //   tickRotation: 0,
-      //   format: a => record.filter(i => i.party_name === a)[0].party,
-      //   legend: "Party",
-      //   legendPosition: "middle",
-      //   legendOffset: -50,
-      // }}
       labelTextColor={{ from: "color", modifiers: [["darker", 1.6]] }}
       legends={[
         {
-          // data: record.map(i => ({
-          //   id: i.geo_long,
-          //   label: i.geo_long,
-          //   color: i.color,
-          // })),
           dataFrom: "indexes",
           anchor: "bottom",
           direction: "row",
-          justify: false,
+          justify: true,
           translateY: 65,
-          itemsSpacing: 2,
-          itemWidth: 55,
+          itemsSpacing: 15,
+          itemWidth: 45,
           itemHeight: 20,
           itemDirection: "left-to-right",
           itemOpacity: 0.85,

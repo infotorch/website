@@ -39,6 +39,10 @@ const style = makeStyles(theme => ({
     height: "600px",
     // padding: "10px",
   },
+  chartHeading: {
+    marginTop: "15px",
+    marginLeft: "15px",
+  },
   // thead: {
   //   fontWeight: "bold",
   //   backgroundColor: "black",
@@ -146,7 +150,9 @@ const CovidDashboard = () => {
         </Grid>
         <Grid item xs>
           <Paper className={classes.chart}>
-            {/* <Typography variant="h5">Cases over time for each state</Typography> */}
+            {/* <Typography variant="h6" className={classes.chartHeading}>
+              Confirmed Cases Australian States
+            </Typography> */}
             <CovidChart />
           </Paper>
         </Grid>
