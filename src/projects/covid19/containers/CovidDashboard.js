@@ -40,6 +40,7 @@ const style = makeStyles(theme => ({
     // paddingTop: "10px",
     // paddingLeft: "10px",
     height: "600px",
+    width: "100%",
     // padding: "10px",
   },
   chartHeading: {
@@ -158,11 +159,11 @@ const CovidDashboard = () => {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={3}>
+      <Grid container spacing={1}>
         <Grid item md={12} lg={6}>
           <TopStatsTable />
         </Grid>
-        <Grid item md={12} lg={6}>
+        <Grid item xs>
           <ContinerCard
             className={classes.chart}
             title={"Confirmed cases by state"}

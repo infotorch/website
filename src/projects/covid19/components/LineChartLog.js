@@ -71,7 +71,7 @@ const LineChartLog = ({ dataSource }) => {
       }}
       curve={"basis"}
       // enablePointLabel={true}
-      margin={{ top: 20, right: 60, bottom: 80, left: 60 }}
+      margin={{ top: 20, right: 0, bottom: 80, left: 60 }}
       pointSize={6}
       pointBorderWidth={1}
       pointBorderColor={{
