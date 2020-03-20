@@ -12,7 +12,7 @@ const colors = {
   AU: "Gold",
   UK: "darkblue",
   Italy: "green",
-  Singapore: "res",
+  Singapore: "crimson",
 }
 
 const getColor = bar => (bar.id in colors ? colors[bar.id] : "red")
