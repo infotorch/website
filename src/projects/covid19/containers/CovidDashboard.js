@@ -18,6 +18,8 @@ import formatDistanceToNow from "date-fns/formatDistanceToNow"
 import { IoMdArrowDropupCircle } from "react-icons/io"
 import { IoMdArrowDropdownCircle } from "react-icons/io"
 
+import CovidChart from "../components/CovidChart"
+
 const style = makeStyles(theme => ({
   root: {
     flexGrow: 1,
@@ -29,6 +31,13 @@ const style = makeStyles(theme => ({
   table: {
     // minWidth: 350,
     // maxWidth: 630,
+  },
+  chart: {
+    // minHeight: "500px",
+    // paddingTop: "10px",
+    // paddingLeft: "10px",
+    height: "560px",
+    // padding: "10px",
   },
   // thead: {
   //   fontWeight: "bold",
@@ -136,8 +145,9 @@ const CovidDashboard = () => {
           <TopStatsTable />
         </Grid>
         <Grid item xs>
-          <Paper>
-            <Typography>Graph</Typography>
+          <Paper className={classes.chart}>
+            {/* <Typography variant="h5">Cases over time for each state</Typography> */}
+            <CovidChart />
           </Paper>
         </Grid>
       </Grid>
