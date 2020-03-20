@@ -8,39 +8,13 @@ const colors = {
   WA: "orange",
   VIC: "green",
   SA: "silver",
-  TAS: "darkyellow",
+  TAS: "yellow",
 }
 
-const getColor = bar => colors[bar]
+const getColor = bar => colors[bar.id]
 
 const SocialFollowingLookupChart = ({ username }) => {
   const [record, setRecord] = useState(undefined)
-
-  const doReq = useCallback(() => {
-    agent.covidAgent
-      .confirmedChart()
-      // .then(data =>
-      //   data.map(i => ({
-      //     id: data["geo"],
-      //     color: getColor(data["geo"]),
-      //   })),
-      // )
-      // .then(r =>
-      //   Object.keys(r).map(i => ({
-      //     party: i,
-      //     percentage: r[i],
-      //     color: colors[i],
-      //   })),
-      // )
-      // .then(data => data.sort((a, b) => (a.percentage < b.percentage ? 1 : -1)))
-      .then(data => {
-        setRecord(data)
-      })
-      .catch(e => {
-        console.error("req error", e)
-        setRecord(undefined)
-      })
-  }, [])
 
   useEffect(() => {
     agent.covidAgent
@@ -52,14 +26,6 @@ const SocialFollowingLookupChart = ({ username }) => {
           ...i,
         })),
       )
-      // .then(r =>
-      //   Object.keys(r).map(i => ({
-      //     party: i,
-      //     percentage: r[i],
-      //     color: colors[i],
-      //   })),
-      // )
-      // .then(data => data.sort((a, b) => (a.percentage < b.percentage ? 1 : -1)))
       .then(data => {
         setRecord(data)
       })
@@ -68,8 +34,6 @@ const SocialFollowingLookupChart = ({ username }) => {
         setRecord(undefined)
       })
   }, [])
-
-  console.log(record)
 
   return record ? (
     <ResponsiveLine
@@ -83,6 +47,7 @@ const SocialFollowingLookupChart = ({ username }) => {
         // stacked: true,
         // reverse: false,
       }}
+      colors={getColor}
       xFormat="time:%d-%B"
       yScale={{
         type: "log",
@@ -96,6 +61,7 @@ const SocialFollowingLookupChart = ({ username }) => {
         legend: "Number of cases (log 10)",
         legendOffset: -52,
       }}
+      enableSlices={"x"}
       axisBottom={{
         format: "%b %d",
         tickValues: "every 3 days",
@@ -104,7 +70,7 @@ const SocialFollowingLookupChart = ({ username }) => {
       }}
       curve={"basis"}
       // enablePointLabel={true}
-      margin={{ top: 50, right: 100, bottom: 50, left: 60 }}
+      margin={{ top: 50, right: 60, bottom: 80, left: 60 }}
       pointSize={6}
       pointBorderWidth={1}
       pointBorderColor={{
@@ -142,13 +108,13 @@ const SocialFollowingLookupChart = ({ username }) => {
           //   color: i.color,
           // })),
           dataFrom: "indexes",
-          anchor: "bottom-right",
-          direction: "column",
+          anchor: "bottom",
+          direction: "row",
           justify: false,
-          translateX: 120,
-          translateY: 0,
+          // translateX: 120,
+          translateY: 60,
           itemsSpacing: 2,
-          itemWidth: 100,
+          itemWidth: 55,
           itemHeight: 20,
           itemDirection: "left-to-right",
           itemOpacity: 0.85,
