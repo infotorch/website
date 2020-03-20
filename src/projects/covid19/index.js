@@ -1,6 +1,8 @@
-import React from "react"
-import { Switch, Route } from "react-router-dom"
+import React, { useEffect } from "react"
+import ReactGA from "react-ga"
+import { Switch, Route, useHistory } from "react-router-dom"
 import { makeStyles } from "@material-ui/core/styles"
+import { logPageView } from "../../analyticsTracker"
 
 import NotFoundContent from "../../components/NotFound"
 import CovidDashboard from "./containers/CovidDashboard"
@@ -21,6 +23,12 @@ const style = makeStyles(theme => ({
 
 const SocialApp = () => {
   const classes = style()
+
+  useEffect(() => {
+    const page = window.location.pathname
+    ReactGA.set({ page: page })
+    ReactGA.pageview(page)
+  }, [])
 
   return (
     <div className={classes.app}>

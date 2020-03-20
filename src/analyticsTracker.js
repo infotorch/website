@@ -5,10 +5,7 @@ import { useHistory } from "react-router-dom"
 export const initializeGA = () => {
   const ANALYTICS_ID = process.env.REACT_APP_ANALYTICS_ID
 
-  console.info("ANALYTICS_ID", ANALYTICS_ID)
   if (ANALYTICS_ID) {
-    console.info(ANALYTICS_ID, "enabled")
-
     ReactGA.initialize(ANALYTICS_ID, {
       debug: process.env.NODE_ENV === "development",
     })
