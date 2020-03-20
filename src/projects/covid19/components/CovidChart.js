@@ -102,7 +102,17 @@ const SocialFollowingLookupChart = ({ username }) => {
         legend: "Date",
         legendOffset: 40,
       }}
-      margin={{ top: 50, right: 20, bottom: 50, left: 60 }}
+      curve={"basis"}
+      // enablePointLabel={true}
+      margin={{ top: 50, right: 100, bottom: 50, left: 60 }}
+      pointSize={6}
+      pointBorderWidth={1}
+      pointBorderColor={{
+        from: "color",
+        modifiers: [["darker", 0.3]],
+      }}
+      useMesh={true}
+      enableSlices={false}
       // axisTop={null}
       // axisRight={null}
       // axisBottom={{
@@ -124,35 +134,35 @@ const SocialFollowingLookupChart = ({ username }) => {
       //   legendOffset: -50,
       // }}
       // labelTextColor={{ from: "color", modifiers: [["darker", 1.6]] }}
-      // legends={[
-      //   {
-      //     data: record.map(i => ({
-      //       id: i.geo_long,
-      //       label: i.geo_long,
-      //       color: i.color,
-      //     })),
-      //     dataFrom: "indexes",
-      //     anchor: "bottom-right",
-      //     direction: "column",
-      //     justify: false,
-      //     translateX: 120,
-      //     translateY: 0,
-      //     itemsSpacing: 2,
-      //     itemWidth: 100,
-      //     itemHeight: 20,
-      //     itemDirection: "left-to-right",
-      //     itemOpacity: 0.85,
-      //     symbolSize: 20,
-      //     effects: [
-      //       {
-      //         on: "hover",
-      //         style: {
-      //           itemOpacity: 1,
-      //         },
-      //       },
-      //     ],
-      //   },
-      // ]}
+      legends={[
+        {
+          // data: record.map(i => ({
+          //   id: i.geo_long,
+          //   label: i.geo_long,
+          //   color: i.color,
+          // })),
+          dataFrom: "indexes",
+          anchor: "bottom-right",
+          direction: "column",
+          justify: false,
+          translateX: 120,
+          translateY: 0,
+          itemsSpacing: 2,
+          itemWidth: 100,
+          itemHeight: 20,
+          itemDirection: "left-to-right",
+          itemOpacity: 0.85,
+          symbolSize: 20,
+          effects: [
+            {
+              on: "hover",
+              style: {
+                itemOpacity: 1,
+              },
+            },
+          ],
+        },
+      ]}
       // animate={true}
       // motionStiffness={90}
       // motionDamping={15}
