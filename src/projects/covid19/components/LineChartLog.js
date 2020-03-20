@@ -13,6 +13,8 @@ const colors = {
   UK: "darkblue",
   Italy: "green",
   Singapore: "crimson",
+  Spain: "purple",
+  "South Korea": "orange",
 }
 
 const getColor = bar => (bar.id in colors ? colors[bar.id] : "red")
