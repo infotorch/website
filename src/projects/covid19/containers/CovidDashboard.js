@@ -21,6 +21,7 @@ import { IoMdArrowDropupCircle } from "react-icons/io"
 import { IoMdArrowDropdownCircle } from "react-icons/io"
 
 import CovidChart from "../components/CovidChart"
+import CovidAUInternationalLineChart from "./CovidAUInternationalLineChart"
 
 const style = makeStyles(theme => ({
   root: {
@@ -158,15 +159,23 @@ const CovidDashboard = () => {
   return (
     <div className={classes.root}>
       <Grid container spacing={3}>
-        <Grid item xs>
+        <Grid item md={12} lg={6}>
           <TopStatsTable />
         </Grid>
-        <Grid item xs>
+        <Grid item md={12} lg={6}>
           <ContinerCard
             className={classes.chart}
             title={"Confirmed cases by state"}
           >
             <CovidChart />
+          </ContinerCard>
+        </Grid>
+        <Grid item md={12} lg={6}>
+          <ContinerCard
+            className={classes.chart}
+            title={"Confirmed cases Australia and select countries"}
+          >
+            <CovidAUInternationalLineChart />
           </ContinerCard>
         </Grid>
       </Grid>

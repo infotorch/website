@@ -49,7 +49,11 @@ const covidAgent = {
   statTotals: () => requests.get("/api/covid19/totals/").then(r => r.data),
   confirmedChart: () =>
     requests
-      .get("/api/covid19/statlist/?geos=NSW,VIC,QLD,WA,SA,TAS&stat=confirmed")
+      .get("/api/covid19/statlist/?geos=NSW,VIC,QLD,WA,SA&stat=confirmed")
+      .then(r => r.data),
+  countryComp: () =>
+    requests
+      .get("/api/covid19/statlist/?geos=AU,Italy,Singapore,UK&stat=confirmed")
       .then(r => r.data),
 }
 
