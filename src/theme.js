@@ -243,6 +243,11 @@ const theme = {
     //     },
     //   },
     // },
+    MuiCardContent: {
+      root: {
+        height: "100%",
+      },
+    },
     MuiTableCell: {
       head: {
         // padding: "40px 24px 40px 16px",

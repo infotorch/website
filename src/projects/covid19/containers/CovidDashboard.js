@@ -11,6 +11,8 @@ import TableCell from "@material-ui/core/TableCell"
 import TableContainer from "@material-ui/core/TableContainer"
 import TableHead from "@material-ui/core/TableHead"
 import TableRow from "@material-ui/core/TableRow"
+import Card from "@material-ui/core/Card"
+import CardContent from "@material-ui/core/CardContent"
 import Typography from "@material-ui/core/Typography"
 import Grid from "@material-ui/core/Grid"
 import formatDistanceToNow from "date-fns/formatDistanceToNow"
@@ -139,6 +141,17 @@ function TopStatsTable({ ...rest }) {
   )
 }
 
+const ContinerCard = ({ title, className, children }) => (
+  <Card className={className}>
+    <CardContent>
+      <Typography variant="h6" component="h2">
+        {title}
+      </Typography>
+      {children}
+    </CardContent>
+  </Card>
+)
+
 const CovidDashboard = () => {
   const classes = style()
 
@@ -149,12 +162,12 @@ const CovidDashboard = () => {
           <TopStatsTable />
         </Grid>
         <Grid item xs>
-          <Paper className={classes.chart}>
-            {/* <Typography variant="h6" className={classes.chartHeading}>
-              Confirmed Cases Australian States
-            </Typography> */}
+          <ContinerCard
+            className={classes.chart}
+            title={"Confirmed cases by state"}
+          >
             <CovidChart />
-          </Paper>
+          </ContinerCard>
         </Grid>
       </Grid>
     </div>
