@@ -59,14 +59,16 @@ const SocialFollowingLookupChart = ({ username }) => {
       axisLeft={{
         tickValues: [10, 100, 1000, 10000, 100000],
         legend: "Number of cases (log 10)",
-        legendOffset: -52,
+        legendPosition: "middle",
+        legendOffset: -45,
       }}
       enableSlices={"x"}
       axisBottom={{
         format: "%b %d",
-        tickValues: "every 3 days",
+        tickValues: "every 2 days",
         legend: "Date",
-        legendOffset: 40,
+        legendPosition: "middle",
+        legendOffset: 30,
       }}
       curve={"basis"}
       // enablePointLabel={true}
@@ -78,7 +80,6 @@ const SocialFollowingLookupChart = ({ username }) => {
         modifiers: [["darker", 0.3]],
       }}
       useMesh={true}
-      enableSlices={false}
       // axisTop={null}
       // axisRight={null}
       // axisBottom={{
@@ -99,7 +100,7 @@ const SocialFollowingLookupChart = ({ username }) => {
       //   legendPosition: "middle",
       //   legendOffset: -50,
       // }}
-      // labelTextColor={{ from: "color", modifiers: [["darker", 1.6]] }}
+      labelTextColor={{ from: "color", modifiers: [["darker", 1.6]] }}
       legends={[
         {
           // data: record.map(i => ({
@@ -111,8 +112,7 @@ const SocialFollowingLookupChart = ({ username }) => {
           anchor: "bottom",
           direction: "row",
           justify: false,
-          // translateX: 120,
-          translateY: 60,
+          translateY: 65,
           itemsSpacing: 2,
           itemWidth: 55,
           itemHeight: 20,
@@ -129,10 +129,7 @@ const SocialFollowingLookupChart = ({ username }) => {
           ],
         },
       ]}
-      // animate={true}
-      // motionStiffness={90}
-      // motionDamping={15}
-      useMesh={true}
+      animate={true}
     />
   ) : (
     <div />
