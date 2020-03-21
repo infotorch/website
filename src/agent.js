@@ -54,7 +54,7 @@ const covidAgent = {
   countryComp: () =>
     requests
       .get(
-        "/api/covid19/statlist/?geos=AU,Italy,Singapore,UK,Spain,South+Korea&stat=confirmed",
+        "/api/covid19/statlist/?geos=AU,Italy,Singapore,UK,Spain,South+Korea,Taiwan&stat=confirmed",
       )
       .then(r => r.data),
 }
