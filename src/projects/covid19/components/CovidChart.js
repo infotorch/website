@@ -3,12 +3,13 @@ import { ResponsiveLine } from "@nivo/line"
 import agent from "../../../agent"
 
 const colors = {
-  NSW: "crimson",
-  QLD: "darkblue",
-  WA: "orange",
-  VIC: "green",
-  SA: "silver",
-  TAS: "yellow",
+  NSW: "skyblue",
+  QLD: "#800000",
+  WA: "gold",
+  VIC: "navy",
+  SA: "red",
+  TAS: "#006A4E",
+  NT: "#E65A00",
 }
 
 const getColor = bar => colors[bar.id]
