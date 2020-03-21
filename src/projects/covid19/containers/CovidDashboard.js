@@ -166,7 +166,7 @@ const CovidDashboard = () => {
         <Grid item xs>
           <ContinerCard
             className={classes.chart}
-            title={"Confirmed cases by state"}
+            title={"Confirmed cases by state growth rate (log scale)"}
           >
             <CovidChart />
           </ContinerCard>
@@ -174,7 +174,9 @@ const CovidDashboard = () => {
         <Grid item md={12} lg={6}>
           <ContinerCard
             className={classes.chart}
-            title={"Confirmed cases Australia and select countries"}
+            title={
+              "Confirmed case growth rate Australia and select countries (log scale)"
+            }
           >
             <CovidAUInternationalLineChart />
           </ContinerCard>
