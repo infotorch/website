@@ -83,7 +83,7 @@ function StateForecast({ ...rest }) {
                 {getIncrease(row.r, row.confirmed_2 / row.confirmed_3, false)}{" "}
               </TableCell>
               <TableCell align="" size="">
-                {row.doubles_days} days
+                {numeral(row.doubles_days).format("0.0")} days
               </TableCell>
               <TableCell align="">
                 {numeral(row.forecast3).format("0,0")}
