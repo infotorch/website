@@ -57,6 +57,8 @@ const covidAgent = {
         "/api/covid19/statlist/?geos=AU,Italy,Singapore,UK,Spain,South+Korea,Taiwan&stat=confirmed",
       )
       .then(r => r.data),
+  forecastStates: () =>
+    requests.get("/api/covid19/forecast/states").then(r => r.data),
 }
 
 export default {

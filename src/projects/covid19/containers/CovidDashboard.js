@@ -22,6 +22,7 @@ import { IoMdArrowDropdownCircle } from "react-icons/io"
 
 import CovidChart from "../components/CovidChart"
 import CovidAUInternationalLineChart from "./CovidAUInternationalLineChart"
+import StateForecastTable from "../components/StateForecastTable"
 
 const style = makeStyles(theme => ({
   root: {
@@ -78,20 +79,11 @@ function TopStatsTable({ ...rest }) {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    agent.covidAgent
-      .statTotals()
-      // .then(r => r.data)
-      // .then(d =>
-      //   d.map((record, index) => ({
-      //     rank: index + 1,
-      //     ...record,
-      //   })),
-      // )
-      .then(data => {
-        console.log(data)
-        setRows(data)
-        setLoading(false)
-      })
+    agent.covidAgent.statTotals().then(data => {
+      console.log(data)
+      setRows(data)
+      setLoading(false)
+    })
   }, [])
 
   if (loading) {
@@ -162,6 +154,9 @@ const CovidDashboard = () => {
       <Grid container spacing={1}>
         <Grid item md={12} lg={6}>
           <TopStatsTable />
+        </Grid>
+        <Grid item md={12} lg={6}>
+          <StateForecastTable />
         </Grid>
         <Grid item xs>
           <ContinerCard
