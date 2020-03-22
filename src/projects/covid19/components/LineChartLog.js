@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react"
 import { ResponsiveLine } from "@nivo/line"
-import agent from "../../../agent"
 
 const colors = {
   NSW: "crimson",
@@ -21,8 +20,16 @@ const getColor = bar => (bar.id in colors ? colors[bar.id] : "red")
 
 const LineChartLog = ({ dataSource }) => {
   const [record, setRecord] = useState(undefined)
+  const [refresh, setRefresh] = useState(false)
 
   useEffect(() => {
+    setTimeout(() => {
+      setRefresh(true)
+    }, 1000 * 60 * 1)
+  })
+
+  useEffect(() => {
+    setRefresh(false)
     dataSource()
       .then(data => {
         console.log(data)
@@ -32,7 +39,7 @@ const LineChartLog = ({ dataSource }) => {
         console.error("req error", e)
         setRecord(undefined)
       })
-  }, [])
+  }, [refresh])
 
   return record ? (
     <ResponsiveLine

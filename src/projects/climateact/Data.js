@@ -179,7 +179,7 @@ const getColumns = d =>
   }))
 
 const Grid = () => {
-  const [rows, setRows] = useState(data.data)
+  const [rows] = useState(data.data)
   const columns = getColumns(data)
 
   return (

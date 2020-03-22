@@ -1,8 +1,7 @@
 import React, { useEffect } from "react"
 import ReactGA from "react-ga"
-import { Switch, Route, useHistory } from "react-router-dom"
+import { Switch, Route } from "react-router-dom"
 import { makeStyles } from "@material-ui/core/styles"
-import { logPageView } from "../../analyticsTracker"
 
 import NotFoundContent from "../../components/NotFound"
 import CovidDashboard from "./containers/CovidDashboard"

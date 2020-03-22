@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
 import numeral from "numeral"
-import { parseISO, format } from "date-fns"
 import { makeStyles } from "@material-ui/core/styles"
 import Paper from "@material-ui/core/Paper"
 import PaperLoadingScreen from "../../../components/PaperLoadingScreen"
@@ -11,7 +10,6 @@ import TableCell from "@material-ui/core/TableCell"
 import TableContainer from "@material-ui/core/TableContainer"
 import TableHead from "@material-ui/core/TableHead"
 import TableRow from "@material-ui/core/TableRow"
-import formatDistanceToNow from "date-fns/formatDistanceToNow"
 import getIncrease from "./IncreaseArrows"
 
 const style = makeStyles(theme => ({
@@ -49,13 +47,22 @@ function StateForecast({ ...rest }) {
   const classes = style()
   const [rows, setRows] = useState([])
   const [loading, setLoading] = useState(true)
+  const [refresh, setRefresh] = useState(false)
 
   useEffect(() => {
+    setTimeout(() => {
+      setRefresh(true)
+    }, 1000 * 60 * 1)
+  })
+
+  useEffect(() => {
+    setRefresh(false)
+
     agent.covidAgent.forecastStates().then(data => {
       setRows(data)
       setLoading(false)
     })
-  }, [])
+  }, [refresh])
 
   if (loading) {
     return <PaperLoadingScreen />
@@ -74,18 +81,18 @@ function StateForecast({ ...rest }) {
         </TableHead>
         <TableBody>
           {rows.map(row => (
-            <TableRow key={row.state_long}>
+            <TableRow key={"forecast_" + row.state_long}>
               <TableCell component="th" scope="row">
                 {row.state_long}
               </TableCell>
-              <TableCell align="left" size="">
+              <TableCell align="left">
                 {row.r}{" "}
                 {getIncrease(row.r, row.confirmed_2 / row.confirmed_3, false)}{" "}
               </TableCell>
-              <TableCell align="" size="">
+              <TableCell>
                 {numeral(row.doubles_days).format("0.0")} days
               </TableCell>
-              <TableCell align="">
+              <TableCell>
                 {numeral(row.forecast3).format("0,0")}
                 {" cases"}
               </TableCell>

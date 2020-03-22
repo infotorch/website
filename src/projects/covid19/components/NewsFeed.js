@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles"
 import Paper from "@material-ui/core/Paper"
 import PaperLoadingScreen from "../../../components/PaperLoadingScreen"
 import agent from "../../../agent"
+import Link from "@material-ui/core/Link"
 import Table from "@material-ui/core/Table"
 import TableBody from "@material-ui/core/TableBody"
 import TableCell from "@material-ui/core/TableCell"
@@ -46,13 +47,22 @@ function StateForecast({ ...rest }) {
   const classes = style()
   const [rows, setRows] = useState([])
   const [loading, setLoading] = useState(true)
+  const [refresh, setRefresh] = useState(false)
 
   useEffect(() => {
+    setTimeout(() => {
+      setRefresh(true)
+    }, 1000 * 60 * 5)
+  })
+
+  useEffect(() => {
+    setRefresh(false)
+
     agent.covidAgent.newsFeed().then(data => {
       setRows(data)
       setLoading(false)
     })
-  }, [])
+  }, [refresh])
 
   if (loading) {
     return <PaperLoadingScreen />
@@ -63,23 +73,23 @@ function StateForecast({ ...rest }) {
       <Table className={classes.table} aria-label="simple table">
         <TableHead className={classes.thead}>
           <TableRow>
-            <TableCell colspan="3">
+            <TableCell colSpan="3">
               Latest News from Health Departments
             </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map(row => (
-            <TableRow key={row.state_long}>
+          {rows.map((row, i) => (
+            <TableRow key={"newsfeed__" + row.source + i}>
               <TableCell component="th" scope="row">
                 {row.source.name}
               </TableCell>
-              <TableCell align="left" size="">
-                <a href="{row.link}" alt="{row.title}">
+              <TableCell align="left">
+                <Link href="{row.link}" alt="{row.title}">
                   {row.title}
-                </a>
+                </Link>
               </TableCell>
-              <TableCell align="" size="">
+              <TableCell>
                 {formatDistanceToNow(Date.parse(row.created))} ago
               </TableCell>
             </TableRow>

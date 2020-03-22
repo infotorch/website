@@ -6,11 +6,7 @@ import Paper from "@material-ui/core/Paper"
 import Typography from "@material-ui/core/Typography"
 import tableIcons from "../../../components/TableIcons"
 import PaperLoadingScreen from "../../../components/PaperLoadingScreen"
-import {
-  Twitter,
-  TwitterVerified,
-  TwitterProfileImage,
-} from "../../../components/SocialIcons"
+import { Twitter, TwitterProfileImage } from "../../../components/SocialIcons"
 import agent from "../../../agent"
 
 const style = makeStyles(theme => ({

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react"
+import React, { useEffect, useState } from "react"
 import { ResponsiveLine } from "@nivo/line"
 import agent from "../../../agent"
 
@@ -16,8 +16,17 @@ const getColor = bar => colors[bar.id]
 
 const SocialFollowingLookupChart = ({ username }) => {
   const [record, setRecord] = useState(undefined)
+  const [refresh, setRefresh] = useState(false)
 
   useEffect(() => {
+    setTimeout(() => {
+      setRefresh(true)
+    }, 1000 * 60 * 1)
+  })
+
+  useEffect(() => {
+    setRefresh(false)
+
     agent.covidAgent
       .confirmedChart()
       .then(data =>
@@ -34,7 +43,7 @@ const SocialFollowingLookupChart = ({ username }) => {
         console.error("req error", e)
         setRecord(undefined)
       })
-  }, [])
+  }, [refresh])
 
   return record ? (
     <ResponsiveLine

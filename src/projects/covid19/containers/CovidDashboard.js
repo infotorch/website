@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react"
-import numeral from "numeral"
-import { parseISO, format } from "date-fns"
 import { makeStyles } from "@material-ui/core/styles"
 import Paper from "@material-ui/core/Paper"
 import PaperLoadingScreen from "../../../components/PaperLoadingScreen"
@@ -78,14 +76,21 @@ function TopStatsTable({ ...rest }) {
   const classes = style()
   const [rows, setRows] = useState([])
   const [loading, setLoading] = useState(true)
+  const [refresh, setRefresh] = useState(false)
 
   useEffect(() => {
+    setTimeout(() => {
+      setRefresh(true)
+    }, 1000 * 60 * 1)
+  })
+
+  useEffect(() => {
+    setRefresh(false)
     agent.covidAgent.statTotals().then(data => {
-      console.log(data)
       setRows(data)
       setLoading(false)
     })
-  }, [])
+  }, [refresh])
 
   if (loading) {
     return <PaperLoadingScreen />
