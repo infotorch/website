@@ -83,7 +83,7 @@ function StateForecast({ ...rest }) {
         <TableHead className={classes.thead}>
           <TableRow>
             <TableCell>State</TableCell>
-            <TableCell colSpan="1">R</TableCell>
+            <TableCell colSpan="1">Increase Rate</TableCell>
             <TableCell colSpan="1">Doubles in</TableCell>
             <TableCell colSpan="1">
               <FormControl
