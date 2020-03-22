@@ -11,7 +11,7 @@ const getIncrease = (today, yesterday, showTotal = true) => {
   return (
     <>
       {d > 0 ? (
-        <IoMdArrowDropupCircle style={{ color: "firebrick" }} />
+        <IoMdArrowDropupCircle style={{ color: "firebrick" }} size={16} />
       ) : (
         <IoMdArrowDropdownCircle style={{ color: "forestgreen" }} />
       )}

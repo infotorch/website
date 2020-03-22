@@ -39,7 +39,7 @@ const LineChartLog = ({ dataSource }) => {
         console.error("req error", e)
         setRecord(undefined)
       })
-  }, [refresh])
+  }, [refresh, dataSource])
 
   return record ? (
     <ResponsiveLine

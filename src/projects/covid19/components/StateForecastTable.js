@@ -10,7 +10,6 @@ import TableCell from "@material-ui/core/TableCell"
 import TableContainer from "@material-ui/core/TableContainer"
 import TableHead from "@material-ui/core/TableHead"
 import TableRow from "@material-ui/core/TableRow"
-import InputLabel from "@material-ui/core/InputLabel"
 import MenuItem from "@material-ui/core/MenuItem"
 import FormControl from "@material-ui/core/FormControl"
 import Select from "@material-ui/core/Select"
@@ -78,8 +77,6 @@ function StateForecast({ ...rest }) {
     return <PaperLoadingScreen />
   }
 
-  console.log(forecast)
-
   return (
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="simple table">
@@ -89,7 +86,11 @@ function StateForecast({ ...rest }) {
             <TableCell colSpan="1">R</TableCell>
             <TableCell colSpan="1">Doubles in</TableCell>
             <TableCell colSpan="1">
-              <FormControl variant="outlined" className={classes.formControl}>
+              <FormControl
+                variant="outlined"
+                className={classes.formControl}
+                style={{ margin: 0 }}
+              >
                 <Select
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
