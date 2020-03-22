@@ -85,7 +85,7 @@ function StateForecast({ ...rest }) {
                 {row.source.name}
               </TableCell>
               <TableCell align="left">
-                <Link href="{row.link}" alt="{row.title}">
+                <Link href={row.link} alt="{row.title}">
                   {row.title}
                 </Link>
               </TableCell>
