@@ -10,6 +10,10 @@ import TableCell from "@material-ui/core/TableCell"
 import TableContainer from "@material-ui/core/TableContainer"
 import TableHead from "@material-ui/core/TableHead"
 import TableRow from "@material-ui/core/TableRow"
+import InputLabel from "@material-ui/core/InputLabel"
+import MenuItem from "@material-ui/core/MenuItem"
+import FormControl from "@material-ui/core/FormControl"
+import Select from "@material-ui/core/Select"
 import getIncrease from "./IncreaseArrows"
 
 const style = makeStyles(theme => ({
@@ -41,6 +45,11 @@ const style = makeStyles(theme => ({
   //   backgroundColor: "black",
   //   color: "white",
   // },
+  formControl: {
+    margin: theme.spacing(1),
+    minWidth: 120,
+    backgroundColor: "white",
+  },
 }))
 
 function StateForecast({ ...rest }) {
@@ -48,6 +57,7 @@ function StateForecast({ ...rest }) {
   const [rows, setRows] = useState([])
   const [loading, setLoading] = useState(true)
   const [refresh, setRefresh] = useState(false)
+  const [forecast, setForecast] = useState(3)
 
   useEffect(() => {
     setTimeout(() => {
@@ -68,6 +78,8 @@ function StateForecast({ ...rest }) {
     return <PaperLoadingScreen />
   }
 
+  console.log(forecast)
+
   return (
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="simple table">
@@ -76,7 +88,19 @@ function StateForecast({ ...rest }) {
             <TableCell>State</TableCell>
             <TableCell colSpan="1">R</TableCell>
             <TableCell colSpan="1">Doubles in</TableCell>
-            <TableCell colSpan="1">3 Day Forecast</TableCell>
+            <TableCell colSpan="1">
+              <FormControl variant="outlined" className={classes.formControl}>
+                <Select
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  value={forecast}
+                  onChange={e => setForecast(e.target.value)}
+                >
+                  <MenuItem value={3}>Three Day Forecast</MenuItem>
+                  <MenuItem value={7}>Seven Day Forecast</MenuItem>
+                </Select>
+              </FormControl>
+            </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -93,7 +117,9 @@ function StateForecast({ ...rest }) {
                 {numeral(row.doubles_days).format("0.0")} days
               </TableCell>
               <TableCell>
-                {numeral(row.forecast3).format("0,0")}
+                {numeral(forecast === 3 ? row.forecast3 : row.forecast7).format(
+                  "0,0",
+                )}
                 {" cases"}
               </TableCell>
             </TableRow>
