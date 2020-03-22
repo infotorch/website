@@ -59,6 +59,7 @@ const covidAgent = {
       .then(r => r.data),
   forecastStates: () =>
     requests.get("/api/covid19/forecast/states").then(r => r.data),
+  newsFeed: () => requests.get("/api/covid19/news/feed").then(r => r.data),
 }
 
 export default {

@@ -23,6 +23,7 @@ import { IoMdArrowDropdownCircle } from "react-icons/io"
 import CovidChart from "../components/CovidChart"
 import CovidAUInternationalLineChart from "./CovidAUInternationalLineChart"
 import StateForecastTable from "../components/StateForecastTable"
+import NewsFeed from "../components/NewsFeed"
 
 const style = makeStyles(theme => ({
   root: {
@@ -175,6 +176,9 @@ const CovidDashboard = () => {
           >
             <CovidAUInternationalLineChart />
           </ContinerCard>
+        </Grid>
+        <Grid item md={12} lg={6}>
+          <NewsFeed />
         </Grid>
       </Grid>
     </div>
