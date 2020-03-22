@@ -25,7 +25,7 @@ const LineChartLog = ({ dataSource }) => {
   useEffect(() => {
     setTimeout(() => {
       setRefresh(true)
-    }, 1000 * 60 * 1)
+    }, 1000 * 60 * 10)
   })
 
   useEffect(() => {
