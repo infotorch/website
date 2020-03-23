@@ -90,6 +90,7 @@ function StateForecast({ ...rest }) {
                 variant="outlined"
                 className={classes.formControl}
                 style={{ margin: 0 }}
+                size="small"
               >
                 <Select
                   labelId="demo-simple-select-label"
