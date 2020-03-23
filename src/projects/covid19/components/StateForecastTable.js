@@ -23,14 +23,8 @@ const style = makeStyles(theme => ({
     padding: "30px",
     marginBottom: "30px",
   },
-  table: {
-    // minWidth: 350,
-    // maxWidth: 630,
-  },
+  table: {},
   chart: {
-    // minHeight: "500px",
-    // paddingTop: "10px",
-    // paddingLeft: "10px",
     height: "600px",
     width: "100%",
     // padding: "10px",
