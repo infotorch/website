@@ -111,7 +111,7 @@ function StateForecast({ ...rest }) {
                 {row.state_long}
               </TableCell>
               <TableCell align="left">
-                {row.r}{" "}
+                {numeral(row.r - 1).format("%0,0.0")}{" "}
                 {getIncrease(row.r, row.confirmed_2 / row.confirmed_3, false)}{" "}
               </TableCell>
               <TableCell>
