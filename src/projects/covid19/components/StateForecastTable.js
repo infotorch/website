@@ -84,7 +84,7 @@ function StateForecast({ ...rest }) {
           <TableRow>
             <TableCell>State</TableCell>
             <TableCell colSpan="1">Increase Rate</TableCell>
-            <TableCell colSpan="1">Doubles in</TableCell>
+            {/* <TableCell colSpan="1">Doubles in</TableCell> */}
             <TableCell colSpan="1">
               <FormControl
                 variant="outlined"
@@ -115,9 +115,9 @@ function StateForecast({ ...rest }) {
                 {numeral(row.r - 1).format("%0,0.0")}{" "}
                 {getIncrease(row.r, row.confirmed_2 / row.confirmed_3, false)}{" "}
               </TableCell>
-              <TableCell>
+              {/* <TableCell>
                 {numeral(row.doubles_days).format("0.0")} days
-              </TableCell>
+              </TableCell> */}
               <TableCell>
                 {numeral(forecast === 3 ? row.forecast3 : row.forecast7).format(
                   "0,0",
