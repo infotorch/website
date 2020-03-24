@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 
 import * as Sentry from "@sentry/browser"
 
-import ErrorIcon from "@material-ui/icons/Error"
+import { MdError as ErrorIcon } from "react-icons/md"
 
 import EmptyState from "./EmptyState"
 

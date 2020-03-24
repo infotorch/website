@@ -2,9 +2,6 @@ import React, { Component } from "react"
 
 import PropTypes from "prop-types"
 
-import Box from "@material-ui/core/Box"
-import Typography from "@material-ui/core/Typography"
-
 class EmptyState extends Component {
   render() {
     // Properties
@@ -26,7 +23,7 @@ class EmptyState extends Component {
 
     if (type === "content") {
       return (
-        <Box
+        <div
           style={{
             width: "100%",
             height: "100%",
@@ -39,47 +36,47 @@ class EmptyState extends Component {
           textAlign="center"
         >
           {icon && (
-            <Box clone color="text.secondary" fontSize={fontSize}>
+            <div clone color="text.secondary" fontSize={fontSize}>
               {icon}
-            </Box>
+            </div>
           )}
 
           {title && (
-            <Typography color="textSecondary" variant={variant}>
+            <span color="textSecondary" variant={variant}>
               {title}
-            </Typography>
+            </span>
           )}
 
           {description && (
-            <Typography color="textSecondary" variant="body1">
+            <span color="textSecondary" variant="body1">
               {description}
-            </Typography>
+            </span>
           )}
-        </Box>
+        </div>
       )
     }
 
     if (type === "card") {
       return (
-        <Box padding={padding} textAlign="center">
+        <div padding={padding} textAlign="center">
           {icon && (
-            <Box clone color="text.secondary" fontSize={fontSize}>
+            <div clone color="text.secondary" fontSize={fontSize}>
               {icon}
-            </Box>
+            </div>
           )}
 
           {title && (
-            <Typography color="textSecondary" variant={variant}>
+            <span color="textSecondary" variant={variant}>
               {title}
-            </Typography>
+            </span>
           )}
 
           {description && (
-            <Typography color="textSecondary" variant="body1">
+            <span color="textSecondary" variant="body1">
               {description}
-            </Typography>
+            </span>
           )}
-        </Box>
+        </div>
       )
     }
 
