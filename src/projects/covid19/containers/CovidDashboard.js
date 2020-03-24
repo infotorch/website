@@ -161,9 +161,9 @@ const CovidDashboard = () => {
         <Grid item md={12} lg={6}>
           <TopStatsTable />
         </Grid>
-        {/* <Grid item md={12} lg={6}>
+        <Grid item md={12} lg={6}>
           <StateForecastTable />
-        </Grid> */}
+        </Grid>
         <Grid item xs>
           <ContinerCard
             className={classes.chart}
