@@ -49,23 +49,14 @@ function StateForecast({ ...rest }) {
   const classes = style()
   const [rows, setRows] = useState([])
   const [loading, setLoading] = useState(true)
-  const [refresh, setRefresh] = useState(false)
   const [forecast, setForecast] = useState(3)
 
   useEffect(() => {
-    setTimeout(() => {
-      setRefresh(true)
-    }, 1000 * 60 * 5)
-  })
-
-  useEffect(() => {
-    setRefresh(false)
-
     agent.covidAgent.forecastStates().then(data => {
       setRows(data)
       setLoading(false)
     })
-  }, [refresh])
+  }, [])
 
   if (loading) {
     return <PaperLoadingScreen />
