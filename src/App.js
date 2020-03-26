@@ -5,28 +5,15 @@ import { logPageView } from "./analyticsTracker"
 import ErrorBoundary from "./components/ErrorBoundary"
 import LaunchScreen from "./components/LaunchScreen"
 import NotFoundContent from "./components/NotFound"
+import Footer from "./components/Footer"
 
 // import SocialProjectApp from "./projects/social"
 // import SportsGrantsApp from "./projects/sportsgrants"
 // import ClimateActApp from "./projects/climateact"
-import CovidProject from "./projects/covid20"
+import CovidProject from "./projects/covid20/Dashboard"
 
 import infoTorchLogo from "./images/infotorch-logo.png"
-const styles = {
-  root: {
-    display: "grid",
-    gridTemplateRows: "80px auto",
-    height: "100vh",
-    alignItems: "start",
-  },
-  appBar: {
-    gridColumn: "1",
-    gridRow: "1",
-    backgroundColor: "#006db3",
-    borderBottom: `2px solid #006db3`,
-    color: "white",
-  },
-}
+import { MdHighlight } from "react-icons/md"
 
 const App = () => {
   const [state] = useState({
@@ -40,17 +27,24 @@ const App = () => {
   }, [history])
 
   return (
-    <div styles={styles.root}>
+    <div class="">
       {/* <CssBaseline /> */}
 
       <ErrorBoundary>
         {!ready && <LaunchScreen />}
         {ready && (
           <>
-            <div style={styles.appBar}>
-              <div>
-                <div display="flex" flexGrow={1}>
-                  <img src={infoTorchLogo} height="50" alt="logo" />
+            <nav class="bg-blue-800 absolute top-0 left-0 w-full z-10 md:flex-row md:flex-no-wrap md:justify-start flex items-center p-4">
+              <div class=" mx-auto px-2 ">
+                <div class="w-full items-left px-4">
+                  {/* <img src={infoTorchLogo} height="50" alt="logo" /> */}
+                  <a
+                    class="text-white text-lg text-bold lowercase lg:inline-block font-semibold"
+                    href="/covid19"
+                  >
+                    {/* <MdHighlight />  */}
+                    Infotorch
+                  </a>
                 </div>
 
                 {/* <IconButton
@@ -90,10 +84,10 @@ const App = () => {
                   </IconButton> */}
                 {/* </div> */}
               </div>
-            </div>
-
-            <Switch>
-              {/* <Route path="/social">
+            </nav>
+            <main class="bg-gray-200">
+              <Switch>
+                {/* <Route path="/social">
                 <SocialProjectApp />
               </Route>
               <Route path="/climateact">
@@ -102,14 +96,18 @@ const App = () => {
               <Route path="/sportsgrants">
                 <SportsGrantsApp />
               </Route> */}
-              <Route path="/covid19">
-                <CovidProject />
-              </Route>
+                <Route path="/covid19">
+                  <CovidProject />
+                </Route>
 
-              <Route>
-                <NotFoundContent />
-              </Route>
-            </Switch>
+                <Route>
+                  <NotFoundContent />
+                </Route>
+              </Switch>
+            </main>
+            <footer className="footerFixed" class="flex border-box bg-white">
+              <Footer />
+            </footer>
           </>
         )}
       </ErrorBoundary>
