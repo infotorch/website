@@ -1,50 +1,39 @@
-import React, { useEffect, useState } from "react"
+import React, { useState, useEffect } from "react"
 import { ResponsiveLine } from "@nivo/line"
-import agent from "../../../agent"
+import agent from "../../agent"
 
 const colors = {
-  NSW: "skyblue",
-  QLD: "#800000",
-  WA: "gold",
-  VIC: "navy",
-  SA: "red",
-  TAS: "#006A4E",
-  NT: "#E65A00",
-  ACT: "black",
+  NSW: "crimson",
+  QLD: "darkblue",
+  WA: "orange",
+  VIC: "green",
+  SA: "silver",
+  TAS: "yellow",
+  AU: "Gold",
+  UK: "darkblue",
+  Italy: "green",
+  Singapore: "crimson",
+  Spain: "purple",
+  "South Korea": "orange",
 }
 
-const getColor = bar => colors[bar.id]
+const getColor = bar => (bar.id in colors ? colors[bar.id] : "red")
 
-const SocialFollowingLookupChart = ({ username }) => {
+const InternationalStateChart = ({ dataSource }) => {
   const [record, setRecord] = useState(undefined)
-  const [refresh, setRefresh] = useState(false)
 
   useEffect(() => {
-    setTimeout(() => {
-      setRefresh(true)
-    }, 1000 * 60 * 5)
-  })
-
-  useEffect(() => {
-    setRefresh(false)
-
     agent.covidAgent
-      .confirmedChart()
-      .then(data =>
-        data.map(i => ({
-          id: i["geo"],
-          color: getColor(i["geo"]),
-          ...i,
-        })),
-      )
+      .countryComp()
       .then(data => {
+        console.log(data)
         setRecord(data)
       })
       .catch(e => {
         console.error("req error", e)
         setRecord(undefined)
       })
-  }, [refresh])
+  }, [dataSource])
 
   return record ? (
     <ResponsiveLine
@@ -64,7 +53,7 @@ const SocialFollowingLookupChart = ({ username }) => {
         type: "log",
         base: 10,
         min: 10,
-        max: 1000,
+        max: 100000,
       }}
       borderColor={{ from: "color", modifiers: [["darker", 1.6]] }}
       axisLeft={{
@@ -76,35 +65,36 @@ const SocialFollowingLookupChart = ({ username }) => {
       enableSlices={"x"}
       axisBottom={{
         format: "%b %d",
-        tickValues: "every 2 days",
+        tickValues: "every 7 days",
         legend: "Date",
         legendPosition: "middle",
         legendOffset: 30,
       }}
       curve={"basis"}
       // enablePointLabel={true}
-      margin={{ top: 20, right: 30, bottom: 80, left: 60 }}
+      margin={{ top: 20, right: 0, bottom: 80, left: 60 }}
       pointSize={0}
-      pointBorderWidth={0}
-      // pointBorderColor={{
-      // from: "color",
-      // modifiers: [["darker", 0.3]],
-      // }}
+      pointBorderWidth={1}
+      pointBorderColor={{
+        from: "color",
+        modifiers: [["darker", 0.3]],
+      }}
       useMesh={true}
       labelTextColor={{ from: "color", modifiers: [["darker", 1.6]] }}
       legends={[
         {
           dataFrom: "indexes",
-          anchor: "bottom",
-          direction: "row",
+          anchor: "top-left",
+          direction: "column",
           justify: false,
-          translateY: 65,
-          itemsSpacing: 15,
-          itemWidth: 40,
-          itemHeight: 20,
+          translateY: 20,
+          translateX: 20,
+          itemsSpacing: 5,
+          itemWidth: 60,
+          itemHeight: 25,
           itemDirection: "left-to-right",
-          itemOpacity: 0.85,
-          symbolSize: 20,
+          itemOpacity: 1,
+          symbolSize: 15,
           effects: [
             {
               on: "hover",
@@ -122,4 +112,4 @@ const SocialFollowingLookupChart = ({ username }) => {
   )
 }
 
-export default SocialFollowingLookupChart
+export default InternationalStateChart

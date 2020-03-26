@@ -1,19 +1,13 @@
 import React, { Component } from "react"
-
-import FindIcon from "@material-ui/icons/FindInPage"
-
+import { MdFindInPage as FindIcon } from "react-icons/md"
 import EmptyState from "./EmptyState"
 
-class NotFoundContent extends Component {
-  render() {
-    return (
-      <EmptyState
-        icon={<FindIcon />}
-        title="Content not found"
-        description="The requested URL was not found on this server"
-      />
-    )
-  }
-}
+const NotFoundContent = () => (
+  <EmptyState
+    icon={<FindIcon />}
+    title="Content not found"
+    description="The requested URL was not found on this server"
+  />
+)
 
 export default NotFoundContent
