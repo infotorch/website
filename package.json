@@ -38,7 +38,7 @@
     "predeploy": "react-scripts build",
     "deploy": "aws s3 sync build s3://infotorch.org/ --acl public-read",
     "postdeploy": "yarn run purgecf",
-    "postversion": "git push --tags"
+    "postversion": "git push production"
   },
   "devDependencies": {
     "eslint-config-prettier": "^6.10.0",

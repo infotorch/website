@@ -18,6 +18,7 @@ blocks:
       prologue:
         commands:
           - checkout
+          - cache restore
           - aws ecr get-login --no-include-email | bash
       jobs:
         - name: docker build and push website
@@ -31,4 +32,4 @@ blocks:
               --build-arg REVISION=${REVISION}
               --build-arg REACT_APP_MAPBOX_API_KEY ."
             - docker tag website ${ECR_REGISTRY_WEBSITE}:${SEMAPHORE_GIT_BRANCH}
-            - docker push ${ECR_REGISTRY_WEBSITE}::${SEMAPHORE_GIT_BRANCH}
+            - docker push ${ECR_REGISTRY_WEBSITE}:${SEMAPHORE_GIT_BRANCH}
