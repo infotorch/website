@@ -27,8 +27,8 @@ blocks:
               --build-arg REACT_APP_SENTRY_DSN
               --build-arg REACT_APP_API_ENDPOINT
               --build-arg REACT_APP_ANALYTICS_ID
-              --build-arg BRANCH_NAME=${BRANCH_NAME}
-              --build-arg REVISION=${REVISION}
+              --build-arg REACT_APP_BRANCH_NAME=${SEMAPHORE_GIT_BRANCH}
+              --build-arg REACT_APP_BRANCH_NAME=${SEMAPHORE_GIT_REVISION}
               --build-arg REACT_APP_MAPBOX_API_KEY ."
-            - "docker tag website ${ECR_REGISTRY_WEBSITE}"
-            - "docker push ${ECR_REGISTRY_WEBSITE}"
+            - docker tag website ${ECR_REGISTRY_WEBSITE}:${SEMAPHORE_GIT_BRANCH}
+            - docker push ${ECR_REGISTRY_WEBSITE}:${SEMAPHORE_GIT_BRANCH}
