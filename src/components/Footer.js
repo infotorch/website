@@ -2,8 +2,8 @@ import React from "react"
 import pkg from "../../package.json"
 
 const ProjectIntro = () => (
-  <div class="w-full block mb-8 mt-4 py-4">
-    <div class="px-4 mx-auto">
+  <div className="w-full block mb-8 mt-4 py-4">
+    <div className="px-4 mx-auto">
       <div className="flex flex-wrap">
         <div className="w-1/2 px-4">
           <div className="font-mono font-small">v{pkg["version"]}</div>

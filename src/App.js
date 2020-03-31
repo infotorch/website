@@ -7,13 +7,10 @@ import LaunchScreen from "./components/LaunchScreen"
 import NotFoundContent from "./components/NotFound"
 import Footer from "./components/Footer"
 
-// import SocialProjectApp from "./projects/social"
+import SocialProjectApp from "./projects/social"
 // import SportsGrantsApp from "./projects/sportsgrants"
 // import ClimateActApp from "./projects/climateact"
 import CovidProject from "./projects/covid20/Dashboard"
-
-import infoTorchLogo from "./images/infotorch-logo.png"
-import { MdHighlight } from "react-icons/md"
 
 const App = () => {
   const [state] = useState({
@@ -27,19 +24,19 @@ const App = () => {
   }, [history])
 
   return (
-    <div class="">
+    <div>
       {/* <CssBaseline /> */}
 
       <ErrorBoundary>
         {!ready && <LaunchScreen />}
         {ready && (
           <>
-            <nav class="bg-blue-800 absolute top-0 left-0 w-full z-10 md:flex-row md:flex-no-wrap md:justify-start flex items-center p-4">
-              <div class=" mx-auto px-2 ">
-                <div class="w-full items-left px-4">
+            <nav className="bg-blue-800 absolute top-0 left-0 w-full z-10 md:flex-row md:flex-no-wrap md:justify-start flex items-center p-4">
+              <div className=" mx-auto px-2 ">
+                <div className="w-full items-left px-4">
                   {/* <img src={infoTorchLogo} height="50" alt="logo" /> */}
                   <a
-                    class="text-white text-lg text-bold lowercase lg:inline-block font-semibold"
+                    className="text-white text-lg text-bold lowercase lg:inline-block font-semibold"
                     href="/covid19"
                   >
                     {/* <MdHighlight />  */}
@@ -85,12 +82,12 @@ const App = () => {
                 {/* </div> */}
               </div>
             </nav>
-            <main class="bg-gray-200">
+            <main className="bg-gray-200">
               <Switch>
-                {/* <Route path="/social">
-                <SocialProjectApp />
-              </Route>
-              <Route path="/climateact">
+                <Route path="/social">
+                  <SocialProjectApp />
+                </Route>
+                {/*<Route path="/climateact">
                 <ClimateActApp />
               </Route>
               <Route path="/sportsgrants">
@@ -105,7 +102,7 @@ const App = () => {
                 </Route>
               </Switch>
             </main>
-            <footer className="footerFixed" class="flex border-box bg-white">
+            <footer className="footerFixed flex border-box bg-white">
               <Footer />
             </footer>
           </>

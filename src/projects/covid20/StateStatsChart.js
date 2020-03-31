@@ -55,7 +55,7 @@ const StateStatsChart = ({ username }) => {
         type: "log",
         base: 10,
         min: 10,
-        max: 1000,
+        max: 10000,
       }}
       borderColor={{ from: "color", modifiers: [["darker", 1.6]] }}
       axisLeft={{

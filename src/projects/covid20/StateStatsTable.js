@@ -19,10 +19,13 @@ const TopStatsTable = ({ ...rest }) => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    agent.covidAgent.statTotals().then(data => {
-      setRows(data)
-      setLoading(false)
-    })
+    agent.covidAgent
+      .statTotals()
+      .then(d => d.filter(a => a.state !== "AU"))
+      .then(data => {
+        setRows(data)
+        setLoading(false)
+      })
   }, [])
 
   if (loading) {
@@ -45,13 +48,13 @@ const TopStatsTable = ({ ...rest }) => {
               State
             </TableHeaderCell>
             <TableHeaderCell
-              colspan="2"
+              colSpan="2"
               className="whitespace-no-wrap pl-6 text-left"
             >
               Cases
             </TableHeaderCell>
             <TableHeaderCell
-              colspan="2"
+              colSpan="2"
               className="whitespace-no-wrap pl-6 text-left"
             >
               Deaths

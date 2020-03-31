@@ -79,7 +79,7 @@ const InternationalStateChart = ({ dataSource }) => {
         from: "color",
         modifiers: [["darker", 0.3]],
       }}
-      useMesh={true}
+      // useMesh={true}
       labelTextColor={{ from: "color", modifiers: [["darker", 1.6]] }}
       legends={[
         {

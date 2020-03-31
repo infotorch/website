@@ -9,6 +9,6 @@ export {
   TableRow,
 } from "./Table"
 
-export { BoxTitle } from "./Box"
+export { Box, BoxTitle, BoxShadow, BoxStat } from "./Box"
 
 export { TrendIcon } from "./Icons"
