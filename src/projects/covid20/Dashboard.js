@@ -8,6 +8,7 @@ import StateForecastTable from "./StateForecastTable"
 import StateStatsChart from "./StateStatsChart"
 import InternationalStatChart from "./InternationalStatChart"
 import StatsBoxes from "./StatsBoxes"
+import NewsFeed from "./NewsFeed"
 
 import { BoxShadow } from "../../ui"
 
@@ -50,6 +51,9 @@ export default function Dashboard() {
             </BoxShadow> */}
             <BoxShadow large style={{ height: "550px" }}>
               <InternationalStatChart />
+            </BoxShadow>
+            <BoxShadow large>
+              <NewsFeed />
             </BoxShadow>
           </div>
         </div>
