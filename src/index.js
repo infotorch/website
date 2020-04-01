@@ -2,11 +2,9 @@ import React from "react"
 import ReactDOM from "react-dom"
 import * as Sentry from "@sentry/browser"
 import { BrowserRouter } from "react-router-dom"
-
 import { initializeGA } from "./analyticsTracker"
-
-import "./index.css"
 import App from "./App"
+import "./styles/tailwind.css"
 
 initializeGA()
 

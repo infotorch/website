@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { ResponsiveLine } from "@nivo/line"
-import agent from "../../../agent"
+import agent from "../../agent"
 
 const colors = {
   NSW: "skyblue",
@@ -15,19 +15,10 @@ const colors = {
 
 const getColor = bar => colors[bar.id]
 
-const SocialFollowingLookupChart = ({ username }) => {
+const StateStatsChart = ({ username }) => {
   const [record, setRecord] = useState(undefined)
-  const [refresh, setRefresh] = useState(false)
 
   useEffect(() => {
-    setTimeout(() => {
-      setRefresh(true)
-    }, 1000 * 60 * 5)
-  })
-
-  useEffect(() => {
-    setRefresh(false)
-
     agent.covidAgent
       .confirmedChart()
       .then(data =>
@@ -44,7 +35,7 @@ const SocialFollowingLookupChart = ({ username }) => {
         console.error("req error", e)
         setRecord(undefined)
       })
-  }, [refresh])
+  }, [])
 
   return record ? (
     <ResponsiveLine
@@ -64,7 +55,7 @@ const SocialFollowingLookupChart = ({ username }) => {
         type: "log",
         base: 10,
         min: 10,
-        max: 1000,
+        max: 10000,
       }}
       borderColor={{ from: "color", modifiers: [["darker", 1.6]] }}
       axisLeft={{
@@ -122,4 +113,4 @@ const SocialFollowingLookupChart = ({ username }) => {
   )
 }
 
-export default SocialFollowingLookupChart
+export default StateStatsChart

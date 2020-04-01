@@ -1,37 +1,18 @@
-import React, { Component } from "react"
+import React from "react"
+import { AiOutlineReload as CircularProgress } from "react-icons/ai"
 
-import PropTypes from "prop-types"
-
-import { withStyles } from "@material-ui/core/styles"
-
-import CircularProgress from "@material-ui/core/CircularProgress"
-
-const styles = theme => ({
-  center: {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    textAlign: "center",
-  },
-})
-
-class LaunchScreen extends Component {
-  render() {
-    // Styling
-    const { classes } = this.props
-
-    return (
-      <div className={classes.center}>
-        <CircularProgress />
-      </div>
-    )
-  }
+const styles = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  textAlign: "center",
 }
 
-LaunchScreen.propTypes = {
-  // Styling
-  classes: PropTypes.object.isRequired,
-}
+const LaunchScreen = () => (
+  <div style={styles}>
+    <CircularProgress />
+  </div>
+)
 
-export default withStyles(styles)(LaunchScreen)
+export default LaunchScreen
