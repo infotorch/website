@@ -67,7 +67,7 @@ const StateStatsChart = ({ username }) => {
       enableSlices={"x"}
       axisBottom={{
         format: "%b %d",
-        tickValues: "every 2 days",
+        tickValues: "every 4 days",
         legend: "Date",
         legendPosition: "middle",
         legendOffset: 30,

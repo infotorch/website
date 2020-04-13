@@ -37,7 +37,7 @@ const TopStatsTable = ({ ...rest }) => {
                   {row.title.substr(0, 60)} {row.title.length > 60 ? ".." : ""}
                 </a>
               </TableCell>
-              <TableCell>{timeSince(Date.parse(row.created))} ago</TableCell>
+              <TableCell>{timeSince(Date.parse(row.created))}</TableCell>
             </TableRow>
           ))}
         </TableBody>

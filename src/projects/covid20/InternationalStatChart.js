@@ -53,7 +53,7 @@ const InternationalStateChart = ({ dataSource }) => {
         type: "log",
         base: 10,
         min: 10,
-        max: 100000,
+        max: 200000,
       }}
       borderColor={{ from: "color", modifiers: [["darker", 1.6]] }}
       axisLeft={{
