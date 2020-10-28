@@ -87,12 +87,12 @@ const App = () => {
                 <Route path="/social">
                   <SocialProjectApp />
                 </Route>
-                {/*<Route path="/climateact">
-                <ClimateActApp />
-              </Route>
-              <Route path="/sportsgrants">
-                <SportsGrantsApp />
-              </Route> */}
+                <Route path="/climateact">
+                  <ClimateActApp />
+                </Route>
+                <Route path="/sportsgrants">
+                  <SportsGrantsApp />
+                </Route>
                 <Route path="/covid19">
                   <CovidProject />
                 </Route>
