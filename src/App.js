@@ -8,7 +8,7 @@ import NotFoundContent from "./components/NotFound"
 import Footer from "./components/Footer"
 
 import SocialProjectApp from "./projects/social"
-// import SportsGrantsApp from "./projects/sportsgrants"
+import SportsGrantsApp from "./projects/sportsgrants"
 // import ClimateActApp from "./projects/climateact"
 import CovidProject from "./projects/covid20/Dashboard"
 
@@ -87,9 +87,9 @@ const App = () => {
                 <Route path="/social">
                   <SocialProjectApp />
                 </Route>
-                <Route path="/climateact">
+                {/* <Route path="/climateact">
                   <ClimateActApp />
-                </Route>
+                </Route> */}
                 <Route path="/sportsgrants">
                   <SportsGrantsApp />
                 </Route>
