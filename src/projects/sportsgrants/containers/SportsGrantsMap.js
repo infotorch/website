@@ -363,7 +363,7 @@ const Map = () => {
       ref={mapEl}
       attributionControl={false}
       onViewportChange={setViewport}
-      mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_API_KEY}
+      mapboxApiAccessToken="pk.eyJ1IjoiaW5mb3RvcmNoIiwiYSI6ImNrNzZ6YXBweTAyZHczZnA1aWxzMzBncmUifQ.RDyoU9CHYiDnL2XRyPwdTg"
       onMouseMove={onMouse}
       // onClick={handleMapClick}
       touchZoom={true}
