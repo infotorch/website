@@ -1,0 +1,25 @@
+.it_container {
+  height: 100%;
+  /* top: 0; */
+  /* bottom: 0; */
+  width: 100%;
+  position: absolute;
+  display: grid;
+  grid-template-rows: 100px auto 150px;
+  grid-template-areas:
+    "nav"
+    "main"
+    "footer";
+}
+
+nav {
+  grid-area: nav;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}

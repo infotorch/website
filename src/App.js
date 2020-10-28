@@ -12,6 +12,8 @@ import SportsGrantsApp from "./projects/sportsgrants"
 // import ClimateActApp from "./projects/climateact"
 import CovidProject from "./projects/covid20/Dashboard"
 
+import "./App.css"
+
 const App = () => {
   const [state] = useState({
     ready: true,
@@ -26,18 +28,17 @@ const App = () => {
   return (
     <div>
       {/* <CssBaseline /> */}
-
       <ErrorBoundary>
         {!ready && <LaunchScreen />}
         {ready && (
-          <>
+          <div className="it_container">
             <nav className="bg-blue-800 absolute top-0 left-0 w-full z-10 md:flex-row md:flex-no-wrap md:justify-start flex items-center p-4">
               <div className=" mx-auto px-2 ">
                 <div className="w-full items-left px-4">
                   {/* <img src={infoTorchLogo} height="50" alt="logo" /> */}
                   <a
                     className="text-white text-lg text-bold lowercase lg:inline-block font-semibold"
-                    href="/covid19"
+                    href="/social"
                   >
                     {/* <MdHighlight />  */}
                     Infotorch
@@ -82,7 +83,7 @@ const App = () => {
                 {/* </div> */}
               </div>
             </nav>
-            <main className="bg-gray-200">
+            <main className="bg-gray-200 w-full h-auto">
               <Switch>
                 <Route path="/social">
                   <SocialProjectApp />
@@ -102,10 +103,10 @@ const App = () => {
                 </Route>
               </Switch>
             </main>
-            <footer className="footerFixed flex border-box bg-white">
+            <footer className="footerFixed border-box bg-white">
               <Footer />
             </footer>
-          </>
+          </div>
         )}
       </ErrorBoundary>
     </div>
